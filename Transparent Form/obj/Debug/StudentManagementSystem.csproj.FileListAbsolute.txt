@@ -1,0 +1,103 @@
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\StudentManagementSystem.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\StudentManagementSystem.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent_Form.CourseForm.resources
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent_Form.LoginForm.resources
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent_Form.MainForm.resources
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent_Form.ManageCourseForm.resources
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent_Form.ManageScoreForm.resources
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent_Form.ManageStudentForm.resources
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent_Form.PrintCourseForm.resources
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent_Form.PrintScoreForm.resources
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent_Form.PrintStudent.resources
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent_Form.Properties.Resources.resources
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent_Form.SplashForm.resources
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\StudentManagementSystem.csproj.GenerateResource.cache
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\StudentManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\nunit.engine.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\nunit.engine.api.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\nunit.engine.core.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\testcentric.engine.metadata.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\Transparent Form.exe.config
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\Transparent Form.exe
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\Transparent Form.pdb
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\Google.Protobuf.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\Guna.UI2.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\MySql.Data.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\nunit.framework.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\System.Buffers.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\System.Memory.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\ZstdNet.dll
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\Google.Protobuf.pdb
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\Google.Protobuf.xml
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\MySql.Data.xml
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\nunit.framework.xml
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\System.Buffers.xml
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\System.Memory.xml
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\StudentManagementSystem.csproj.CopyComplete
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent Form.exe
+C:\Users\Lenovo\Downloads\Student Management System-20221102T142837Z-001\Student Management System\Transparent Form\obj\Debug\Transparent Form.pdb
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\NUnit3.TestAdapter.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\NUnit3.TestAdapter.pdb
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\nunit.engine.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\nunit.engine.api.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\nunit.engine.core.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\testcentric.engine.metadata.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\Transparent Form.exe.config
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\Transparent Form.exe
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\Transparent Form.pdb
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\BouncyCastle.Crypto.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\Google.Protobuf.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\Guna.UI2.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\K4os.Compression.LZ4.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\K4os.Hash.xxHash.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\MySql.Data.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\nunit.framework.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\System.Buffers.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\System.Memory.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\System.Numerics.Vectors.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\ZstdNet.dll
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\BouncyCastle.Crypto.xml
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\Google.Protobuf.pdb
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\Google.Protobuf.xml
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\K4os.Compression.LZ4.xml
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\K4os.Hash.xxHash.xml
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\MySql.Data.xml
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\nunit.framework.xml
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\System.Buffers.xml
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\System.Memory.xml
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\System.Numerics.Vectors.xml
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\StudentManagementSystem.csproj.AssemblyReference.cache
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent_Form.CourseForm.resources
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent_Form.LoginForm.resources
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent_Form.MainForm.resources
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent_Form.ManageCourseForm.resources
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent_Form.ManageScoreForm.resources
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent_Form.ManageStudentForm.resources
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent_Form.PrintCourseForm.resources
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent_Form.PrintScoreForm.resources
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent_Form.PrintStudent.resources
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent_Form.Properties.Resources.resources
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent_Form.SplashForm.resources
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\StudentManagementSystem.csproj.GenerateResource.cache
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\StudentManagementSystem.csproj.CoreCompileInputs.cache
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\StudentManagementSystem.csproj.CopyComplete
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent Form.exe
+D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent Form.pdb
