@@ -29,55 +29,59 @@ namespace Transparent_Form
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pnlTop = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.textBox_usrname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button_login = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.pnlTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlTop
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(560, 60);
-            this.panel1.TabIndex = 0;
+            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            this.pnlTop.Controls.Add(this.btnClose);
+            this.pnlTop.Controls.Add(this.label1);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Margin = new System.Windows.Forms.Padding(1, 1, 1, 3);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(1150, 50);
+            this.pnlTop.TabIndex = 0;
+            this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
             // 
-            // label6
+            // btnClose
             // 
-            this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(520, 11);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 38);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "X";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            this.label6.MouseEnter += new System.EventHandler(this.label6_MouseEnter);
-            this.label6.MouseLeave += new System.EventHandler(this.label6_MouseLeave);
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::Transparent_Form.Properties.Resources.icon_close;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1111, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(36, 36);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(237, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(535, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 34);
+            this.label1.Size = new System.Drawing.Size(80, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "LOGIN";
             // 
@@ -86,10 +90,9 @@ namespace Transparent_Form
             this.textBox_password.BackColor = System.Drawing.Color.White;
             this.textBox_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_password.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox_password.Location = new System.Drawing.Point(84, 496);
-            this.textBox_password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox_password.Location = new System.Drawing.Point(701, 318);
             this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(393, 37);
+            this.textBox_password.Size = new System.Drawing.Size(350, 27);
             this.textBox_password.TabIndex = 2;
             this.textBox_password.UseSystemPasswordChar = true;
             // 
@@ -98,35 +101,32 @@ namespace Transparent_Form
             this.textBox_usrname.BackColor = System.Drawing.Color.White;
             this.textBox_usrname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_usrname.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox_usrname.Location = new System.Drawing.Point(84, 395);
-            this.textBox_usrname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox_usrname.Location = new System.Drawing.Point(701, 238);
             this.textBox_usrname.Name = "textBox_usrname";
-            this.textBox_usrname.Size = new System.Drawing.Size(393, 37);
+            this.textBox_usrname.Size = new System.Drawing.Size(350, 27);
             this.textBox_usrname.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.label3.Location = new System.Drawing.Point(81, 358);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(699, 211);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 28);
+            this.label3.Size = new System.Drawing.Size(110, 22);
             this.label3.TabIndex = 1;
-            this.label3.Text = "User Name :";
+            this.label3.Text = "Username :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.label4.Location = new System.Drawing.Point(81, 460);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(699, 291);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 28);
+            this.label4.Size = new System.Drawing.Size(102, 22);
             this.label4.TabIndex = 1;
             this.label4.Text = "Password :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,52 +135,65 @@ namespace Transparent_Form
             // 
             this.button_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
             this.button_login.FlatAppearance.BorderSize = 0;
-            this.button_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.button_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.button_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
             this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_login.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_login.ForeColor = System.Drawing.Color.White;
-            this.button_login.Location = new System.Drawing.Point(84, 678);
-            this.button_login.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_login.Location = new System.Drawing.Point(786, 414);
             this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(391, 62);
+            this.button_login.Size = new System.Drawing.Size(180, 40);
             this.button_login.TabIndex = 3;
             this.button_login.Text = "Login";
             this.button_login.UseVisualStyleBackColor = false;
             this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Transparent_Form.Properties.Resources.Background;
+            this.pictureBox1.Location = new System.Drawing.Point(-31, 576);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1237, 188);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Transparent_Form.Properties.Resources.Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(82, 29);
+            this.pictureBox2.Location = new System.Drawing.Point(36, 113);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(393, 307);
+            this.pictureBox2.Size = new System.Drawing.Size(579, 450);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(562, 800);
+            this.ClientSize = new System.Drawing.Size(1150, 652);
             this.Controls.Add(this.button_login);
             this.Controls.Add(this.textBox_usrname);
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlTop);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -189,14 +202,15 @@ namespace Transparent_Form
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.TextBox textBox_usrname;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button_login;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnClose;
     }
 }
