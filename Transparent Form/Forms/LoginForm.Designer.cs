@@ -32,8 +32,8 @@ namespace Transparent_Form
             this.pnlTop = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox_password = new System.Windows.Forms.TextBox();
-            this.textBox_usrname = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -85,26 +85,26 @@ namespace Transparent_Form
             this.label1.TabIndex = 1;
             this.label1.Text = "LOGIN";
             // 
-            // textBox_password
+            // txtPassword
             // 
-            this.textBox_password.BackColor = System.Drawing.Color.White;
-            this.textBox_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_password.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox_password.Location = new System.Drawing.Point(701, 318);
-            this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(350, 27);
-            this.textBox_password.TabIndex = 2;
-            this.textBox_password.UseSystemPasswordChar = true;
+            this.txtPassword.BackColor = System.Drawing.Color.White;
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtPassword.Location = new System.Drawing.Point(701, 318);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(350, 27);
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // textBox_usrname
+            // txtUsername
             // 
-            this.textBox_usrname.BackColor = System.Drawing.Color.White;
-            this.textBox_usrname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_usrname.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox_usrname.Location = new System.Drawing.Point(701, 238);
-            this.textBox_usrname.Name = "textBox_usrname";
-            this.textBox_usrname.Size = new System.Drawing.Size(350, 27);
-            this.textBox_usrname.TabIndex = 2;
+            this.txtUsername.BackColor = System.Drawing.Color.White;
+            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtUsername.Location = new System.Drawing.Point(701, 238);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(350, 27);
+            this.txtUsername.TabIndex = 2;
             // 
             // label3
             // 
@@ -179,8 +179,8 @@ namespace Transparent_Form
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1150, 652);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox_usrname);
-            this.Controls.Add(this.textBox_password);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pnlTop);
@@ -204,8 +204,8 @@ namespace Transparent_Form
 
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_password;
-        private System.Windows.Forms.TextBox textBox_usrname;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLogin;

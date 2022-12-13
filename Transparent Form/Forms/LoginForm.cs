@@ -6,9 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using NUnit.Framework.Interfaces;
+using Transparent_Form.Models;
 
 namespace Transparent_Form
 {
@@ -54,42 +57,55 @@ namespace Transparent_Form
         }
         #endregion
 
-        Student student = new Student();
+        Account account = new Account();
+
         public LoginForm()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 12, 12));
-            textBox_usrname.Focus();
+            txtUsername.Focus();
             this.AcceptButton = btnLogin;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (textBox_usrname.Text == "" || textBox_password.Text == "")
-            {
+            if (txtUsername.Text == "" || txtPassword.Text == "")
                 MessageBox.Show("Please fill in all fields", "Wrong Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             else
             {
-                string uname = textBox_usrname.Text;
-                string pass = textBox_password.Text;
-                DataTable table = student.getList(new MySqlCommand("SELECT * FROM `user` WHERE `username`= '" + uname + "' AND `password`='" + pass + "'"));
-                if (table.Rows.Count > 0)
-                {
+                string user = txtUsername.Text;
+                string pass = txtPassword.Text;
 
-                    MainForm main = new MainForm();
-                    this.Hide();
-                    main.ShowDialog();
-                    this.Show();
-                    textBox_usrname.Text = "";
-                    textBox_password.Text = "";
-                    textBox_usrname.Focus();
+                if (account.GetAccount(user, pass) != null)
+                {
+                    account = account.GetAccount(user, pass);
+                    if (account.type == 1)
+                    {
+                        Thread thread = new Thread(new ThreadStart(ShowAdminForm));
+                        thread.Start();
+                        this.Close();
+                    }
+                    else if (account.type == 2)
+                    {
+
+                    }
                 }
                 else
-                {
                     MessageBox.Show("Your username and password are not exists", "Wrong Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
+        }
+
+        private void ShowAdminForm()
+        {
+            AdminForm form = new AdminForm();
+            form.ShowDialog();
+        }
+
+        private void ShowStudentForm()
+        {
+            //this.Close();
+            //AdminForm form = new AdminForm();
+            //form.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

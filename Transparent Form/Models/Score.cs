@@ -14,27 +14,27 @@ namespace Transparent_Form
 
         public bool insertScore(int stdid, int courid)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `score`(`StudentId`, `CourseId`) VALUES (@stid,@cid)", connect.getconnection);
+            MySqlCommand command = new MySqlCommand("INSERT INTO `score`(`StudentId`, `CourseId`) VALUES (@stid,@cid)", connect.GetConnection);
             //@stid,@cn,@sco,@desc
             command.Parameters.Add("@stid", MySqlDbType.Int32).Value = stdid;
             command.Parameters.Add("@cid", MySqlDbType.Int32).Value = courid;
             
-            connect.openConnect();
+            connect.OpenConnect();
             if (command.ExecuteNonQuery() == 1)
             {
-                connect.closeConnect();
+                connect.CloseConnect();
                 return true;
             }
             else
             {
-                connect.closeConnect();
+                connect.CloseConnect();
                 return false;
             }
         }
 
         public DataTable getList(MySqlCommand command)
         {
-            command.Connection = connect.getconnection;
+            command.Connection = connect.GetConnection;
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -51,40 +51,40 @@ namespace Transparent_Form
 
         public bool updateScore(int stdid, int scid, Nullable<double> scor, string desc)
         {
-            MySqlCommand command = new MySqlCommand("UPDATE `score` SET `Score`=@sco,`Description`=@desc WHERE `StudentId`=@stid AND `CourseId`=@scid", connect.getconnection);
+            MySqlCommand command = new MySqlCommand("UPDATE `score` SET `Score`=@sco,`Description`=@desc WHERE `StudentId`=@stid AND `CourseId`=@scid", connect.GetConnection);
             command.Parameters.Add("@scid", MySqlDbType.Int32).Value = scid;
             command.Parameters.Add("@stid", MySqlDbType.Int32).Value = stdid;
             command.Parameters.Add("@sco", MySqlDbType.Double).Value = scor;
             command.Parameters.Add("@desc", MySqlDbType.VarChar).Value = desc;
-            connect.openConnect();
+            connect.OpenConnect();
             if (command.ExecuteNonQuery() == 1)
             {
-                connect.closeConnect();
+                connect.CloseConnect();
                 return true;
             }
             else
             {
-                connect.closeConnect();
+                connect.CloseConnect();
                 return false;
             }
         }
 
         public bool deleteScore(int sid, int cid)
         {
-            MySqlCommand command = new MySqlCommand("DELETE FROM `score` WHERE `StudentId`=@sid AND `CourseId`=@cid", connect.getconnection);
+            MySqlCommand command = new MySqlCommand("DELETE FROM `score` WHERE `StudentId`=@sid AND `CourseId`=@cid", connect.GetConnection);
 
             command.Parameters.Add("@sid", MySqlDbType.Int32).Value = sid;
             command.Parameters.Add("@cid", MySqlDbType.Int32).Value = cid;
 
-            connect.openConnect();
+            connect.OpenConnect();
             if (command.ExecuteNonQuery() == 1)
             {
-                connect.closeConnect();
+                connect.CloseConnect();
                 return true;
             }
             else
             {
-                connect.closeConnect();
+                connect.CloseConnect();
                 return false;
             }
         }

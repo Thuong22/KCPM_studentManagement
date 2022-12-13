@@ -15,7 +15,7 @@ namespace Transparent_Form
 
         public bool insertStudent(string fname, string lname, DateTime bdate, string gender, string phone, string address, byte[] img)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `student`(`StdFirstName`, `StdLastName`, `Birthdate`, `Gender`, `Phone`, `Address`, `Photo`) VALUES(@fn, @ln, @bd, @gd, @ph, @adr, @img)",connect.getconnection);
+            MySqlCommand command = new MySqlCommand("INSERT INTO `student`(`StdFirstName`, `StdLastName`, `Birthdate`, `Gender`, `Phone`, `Address`, `Photo`) VALUES(@fn, @ln, @bd, @gd, @ph, @adr, @img)",connect.GetConnection);
 
             //@fn, @ln, @bd, @gd, @ph, @adr, @img
             command.Parameters.Add("@fn", MySqlDbType.VarChar).Value = fname;
@@ -26,15 +26,15 @@ namespace Transparent_Form
             command.Parameters.Add("@adr", MySqlDbType.VarChar).Value = address;
             command.Parameters.Add("@img", MySqlDbType.Blob).Value = img;
 
-            connect.openConnect();
+            connect.OpenConnect();
             if (command.ExecuteNonQuery() == 1)
             {
-                connect.closeConnect();
+                connect.CloseConnect();
                 return true;
             }
             else
             {
-                connect.closeConnect();
+                connect.CloseConnect();
                 return false;
             }
 
@@ -42,7 +42,7 @@ namespace Transparent_Form
         // to get student table
         public DataTable getStudentlist(MySqlCommand command)
         {
-            command.Connection=connect.getconnection;
+            command.Connection=connect.GetConnection;
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -51,10 +51,10 @@ namespace Transparent_Form
 
         public string exeCount(string query)
         {
-            MySqlCommand command = new MySqlCommand(query, connect.getconnection);
-            connect.openConnect();
+            MySqlCommand command = new MySqlCommand(query, connect.GetConnection);
+            connect.OpenConnect();
             string count = command.ExecuteScalar().ToString();
-            connect.closeConnect();
+            connect.CloseConnect();
             return count;
         }
         //to get the total student
@@ -75,7 +75,7 @@ namespace Transparent_Form
         //create a function search for student (first name, last name, address)
         public DataTable searchStudent(string searchdata)
         {
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `student` WHERE CONCAT(`StdFirstName`,`StdLastName`,`Address`) LIKE '%"+ searchdata +"%'", connect.getconnection);
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `student` WHERE CONCAT(`StdFirstName`,`StdLastName`,`Address`) LIKE '%"+ searchdata +"%'", connect.GetConnection);
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -84,7 +84,7 @@ namespace Transparent_Form
        //create a function edit for student
         public bool updateStudent(int id,string fname, string lname, DateTime bdate, string gender, string phone, string address, byte[] img)
         {
-            MySqlCommand command = new MySqlCommand("UPDATE `student` SET `StdFirstName`=@fn,`StdLastName`=@ln,`Birthdate`=@bd,`Gender`=@gd,`Phone`=@ph,`Address`=@adr,`Photo`=@img WHERE  `StdId`= @id", connect.getconnection);
+            MySqlCommand command = new MySqlCommand("UPDATE `student` SET `StdFirstName`=@fn,`StdLastName`=@ln,`Birthdate`=@bd,`Gender`=@gd,`Phone`=@ph,`Address`=@adr,`Photo`=@img WHERE  `StdId`= @id", connect.GetConnection);
 
             //@id,@fn, @ln, @bd, @gd, @ph, @adr, @img
             command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
@@ -96,15 +96,15 @@ namespace Transparent_Form
             command.Parameters.Add("@adr", MySqlDbType.VarChar).Value = address;
             command.Parameters.Add("@img", MySqlDbType.Blob).Value = img;
 
-            connect.openConnect();
+            connect.OpenConnect();
             if (command.ExecuteNonQuery() == 1)
             {
-                connect.closeConnect();
+                connect.CloseConnect();
                 return true;
             }
             else
             {
-                connect.closeConnect();
+                connect.CloseConnect();
                 return false;
             }
 
@@ -113,20 +113,20 @@ namespace Transparent_Form
         //we need only id 
         public bool deleteStudent(int id)
         {
-            MySqlCommand command = new MySqlCommand("DELETE FROM `student` WHERE `StdId`=@id", connect.getconnection);
+            MySqlCommand command = new MySqlCommand("DELETE FROM `student` WHERE `StdId`=@id", connect.GetConnection);
 
             //@id
             command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
             
-            connect.openConnect();
+            connect.OpenConnect();
             if (command.ExecuteNonQuery() == 1)
             {
-                connect.closeConnect();
+                connect.CloseConnect();
                 return true;
             }
             else
             {
-                connect.closeConnect();
+                connect.CloseConnect();
                 return false;
             }
 
@@ -134,7 +134,7 @@ namespace Transparent_Form
         // create a function for any command in studentDb
         public DataTable getList(MySqlCommand command)
         {
-            command.Connection = connect.getconnection;
+            command.Connection = connect.GetConnection;
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);

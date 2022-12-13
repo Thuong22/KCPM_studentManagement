@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace Transparent_Form
 {
-    public partial class MainForm : Form
+    public partial class AdminForm : Form
     {
         Student student = new Student();
         Course course = new Course();
         bool isLogout = false;
-        public MainForm()
+        public AdminForm()
         {
             InitializeComponent();
             customizeDesign();

@@ -139,7 +139,6 @@ C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Deb
 C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\StudentManagementSystem.csproj.SuggestedBindingRedirects.cache
 C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.CourseForm.resources
 C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.LoginForm.resources
-C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.MainForm.resources
 C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.ManageCourseForm.resources
 C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.ManageScoreForm.resources
 C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.ManageStudentForm.resources
@@ -153,3 +152,4 @@ C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Deb
 C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\StudentManagementSystem.csproj.CopyComplete
 C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent Form.exe
 C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent Form.pdb
+C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.AdminForm.resources

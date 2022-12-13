@@ -19,7 +19,7 @@ namespace Transparent_Form
         MySqlConnection connect = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=studentdb");
 
         //to get connection
-        public MySqlConnection getconnection
+        public MySqlConnection GetConnection
         {
             get
             {
@@ -28,14 +28,14 @@ namespace Transparent_Form
         }
 
         //create a function to Open conncetion
-        public void openConnect()
+        public void OpenConnect()
         {
             if (connect.State == System.Data.ConnectionState.Closed)
                 connect.Open();
         }
 
         //Create a fuction to close connection
-        public void closeConnect()
+        public void CloseConnect()
         {
             if (connect.State == System.Data.ConnectionState.Open)
                 connect.Close();
