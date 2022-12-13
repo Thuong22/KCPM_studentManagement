@@ -56,11 +56,10 @@ namespace Transparent_Form
             ProgressIndicator1.Start();
             if (startpoint > 15)
             {
-                LoginForm login = new LoginForm();
                 ProgressIndicator1.Stop();
                 timer1.Stop();
                 this.Hide();
-                login.Show();
+                new LoginForm().Show();
             }
         }
     }

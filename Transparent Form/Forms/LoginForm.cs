@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using NUnit.Framework.Interfaces;
+using NUnit.Framework.Internal;
 using Transparent_Form.Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Transparent_Form
 {
@@ -57,28 +59,39 @@ namespace Transparent_Form
         }
         #endregion
 
-        Account account = new Account();
-
         public LoginForm()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 12, 12));
-            txtUsername.Focus();
+        }
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
             this.AcceptButton = btnLogin;
+            this.ActiveControl = txtUsername;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "" || txtPassword.Text == "")
+            if (txtUsername.Text == "")
+            {
                 MessageBox.Show("Please fill in all fields", "Wrong Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.ActiveControl = txtUsername;
+            }
+            else if (txtPassword.Text == "")
+            {
+                MessageBox.Show("Please fill in all fields", "Wrong Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.ActiveControl = txtPassword;
+            }
             else
             {
                 string user = txtUsername.Text;
                 string pass = txtPassword.Text;
 
-                if (account.GetAccount(user, pass) != null)
+                DataTable table = DataProvider.Instance.ExecuteQuery("SELECT * FROM `user` WHERE `username`= '" + user + "' AND `password`= '" + pass + "'");
+
+                if (table.Rows.Count > 0)
                 {
-                    account = account.GetAccount(user, pass);
+                    Account account = new Account(table.Rows[0][0].ToString(), table.Rows[0][1].ToString(), table.Rows[0][2].ToString(), table.Rows[0][3].ToString());
                     if (account.type == 1)
                     {
                         Thread thread = new Thread(new ThreadStart(ShowAdminForm));
@@ -91,14 +104,16 @@ namespace Transparent_Form
                     }
                 }
                 else
+                {
                     MessageBox.Show("Your username and password are not exists", "Wrong Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.ActiveControl = txtUsername;
+                }
             }
         }
 
         private void ShowAdminForm()
         {
-            AdminForm form = new AdminForm();
-            form.ShowDialog();
+            new AdminForm().ShowDialog();
         }
 
         private void ShowStudentForm()

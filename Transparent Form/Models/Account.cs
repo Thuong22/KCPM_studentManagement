@@ -29,20 +29,5 @@ namespace Transparent_Form.Models
             this.password = pass;
             this.type = int.Parse(type);
         }
-
-        public Account GetAccount(string user, string pass)
-        {
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `user` WHERE `username`= '" + user + "' AND `password`= '" + pass + "'");
-            command.Connection = connect.GetConnection;
-            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            if (table.Rows.Count > 0)
-            {
-                Account account = new Account(table.Rows[0][0].ToString(), table.Rows[0][1].ToString(), table.Rows[0][2].ToString(), table.Rows[0][3].ToString());
-                return account;
-            }
-            return null;
-        }
     }
 }

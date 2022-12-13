@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using Transparent_Form.Models;
 
 namespace Transparent_Form
 {
@@ -15,7 +16,7 @@ namespace Transparent_Form
 
         public bool insertStudent(string fname, string lname, DateTime bdate, string gender, string phone, string address, byte[] img)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `student`(`StdFirstName`, `StdLastName`, `Birthdate`, `Gender`, `Phone`, `Address`, `Photo`) VALUES(@fn, @ln, @bd, @gd, @ph, @adr, @img)",connect.GetConnection);
+            MySqlCommand command = new MySqlCommand("INSERT INTO `student`(`StdFirstName`, `StdLastName`, `Birthdate`, `Gender`, `Phone`, `Address`, `Photo`) VALUES(@fn, @ln, @bd, @gd, @ph, @adr, @img)", connect.GetConnection);
 
             //@fn, @ln, @bd, @gd, @ph, @adr, @img
             command.Parameters.Add("@fn", MySqlDbType.VarChar).Value = fname;
@@ -42,47 +43,38 @@ namespace Transparent_Form
         // to get student table
         public DataTable getStudentlist(MySqlCommand command)
         {
-            command.Connection=connect.GetConnection;
+            command.Connection = connect.GetConnection;
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
             return table;
         }
 
-        public string exeCount(string query)
+        public string GetNumberOfStudents()
         {
-            MySqlCommand command = new MySqlCommand(query, connect.GetConnection);
-            connect.OpenConnect();
-            string count = command.ExecuteScalar().ToString();
-            connect.CloseConnect();
-            return count;
+            return DataProvider.Instance.ExecuteScalar("SELECT COUNT(*) FROM student").ToString();
         }
-        //to get the total student
-        public string totalStudent()
+
+        public string GetNumberOfMaleStudents()
         {
-            return exeCount("SELECT COUNT(*) FROM student");
-        }
-        // to get the male student count
-        public string maleStudent()
-        {
-            return exeCount("SELECT COUNT(*) FROM student WHERE `Gender`='Male'");
+            return DataProvider.Instance.ExecuteScalar("SELECT COUNT(*) FROM student WHERE `Gender`='Male'").ToString();
         }
         // to get the female student count
-        public string femaleStudent()
+        public string GetNumberOfFemaleStudents()
         {
-            return exeCount("SELECT COUNT(*) FROM student WHERE `Gender`='Female'");
+            return DataProvider.Instance.ExecuteScalar("SELECT COUNT(*) FROM student WHERE `Gender`='Female'").ToString();
         }
         //create a function search for student (first name, last name, address)
         public DataTable searchStudent(string searchdata)
         {
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `student` WHERE CONCAT(`StdFirstName`,`StdLastName`,`Address`) LIKE '%"+ searchdata +"%'", connect.GetConnection);
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `student` WHERE CONCAT(`StdFirstName`,`StdLastName`,`Address`) LIKE '%" + searchdata + "%'", connect.GetConnection);
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
             return table;
         }
-       //create a function edit for student
-        public bool updateStudent(int id,string fname, string lname, DateTime bdate, string gender, string phone, string address, byte[] img)
+        //create a function edit for student
+        public bool updateStudent(int id, string fname, string lname, DateTime bdate, string gender, string phone, string address, byte[] img)
         {
             MySqlCommand command = new MySqlCommand("UPDATE `student` SET `StdFirstName`=@fn,`StdLastName`=@ln,`Birthdate`=@bd,`Gender`=@gd,`Phone`=@ph,`Address`=@adr,`Photo`=@img WHERE  `StdId`= @id", connect.GetConnection);
 
@@ -117,7 +109,7 @@ namespace Transparent_Form
 
             //@id
             command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
-            
+
             connect.OpenConnect();
             if (command.ExecuteNonQuery() == 1)
             {
