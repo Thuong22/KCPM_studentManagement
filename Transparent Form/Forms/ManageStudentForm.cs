@@ -14,7 +14,7 @@ namespace Transparent_Form
 {
     public partial class ManageStudentForm : Form
     {
-        StudentClass student = new StudentClass();
+        Student student = new Student();
         public ManageStudentForm()
         {
             InitializeComponent();

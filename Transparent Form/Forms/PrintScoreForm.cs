@@ -15,7 +15,7 @@ namespace Transparent_Form
 {
     public partial class PrintScoreForm : Form
     {
-        ScoreClass score = new ScoreClass();
+        Score score = new Score();
         DGVPrinter printer = new DGVPrinter();
         public PrintScoreForm()
         {

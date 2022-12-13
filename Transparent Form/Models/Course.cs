@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace Transparent_Form
 {
-    class CourseClass
+    class Course
     {
         DBconnect connect = new DBconnect();
         public bool insertCourse(string cName, int hr, string desc)

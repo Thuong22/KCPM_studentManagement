@@ -13,7 +13,7 @@ namespace Transparent_Form
 {
     public partial class ManageCourseForm : Form
     {
-        CourseClass course = new CourseClass();
+        Course course = new Course();
         public ManageCourseForm()
         {
             InitializeComponent();

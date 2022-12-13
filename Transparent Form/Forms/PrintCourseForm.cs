@@ -14,7 +14,7 @@ namespace Transparent_Form
 {
     public partial class PrintCourseForm : Form
     {
-        CourseClass course = new CourseClass();
+        Course course = new Course();
         DGVPrinter printer = new DGVPrinter();
         public PrintCourseForm()
         {

@@ -13,8 +13,8 @@ namespace Transparent_Form
 {
     public partial class ManageScoreForm : Form
     {
-        CourseClass course = new CourseClass();
-        ScoreClass score = new ScoreClass();
+        Course course = new Course();
+        Score score = new Score();
         public ManageScoreForm()
         {
             InitializeComponent();

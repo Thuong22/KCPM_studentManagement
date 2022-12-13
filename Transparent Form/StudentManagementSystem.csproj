@@ -94,7 +94,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\CourseClass.cs" />
+    <Compile Include="Models\Course.cs" />
     <Compile Include="Forms\CourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,14 +158,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Models\ScoreClass.cs" />
+    <Compile Include="Models\Score.cs" />
     <Compile Include="Forms\SplashForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SplashForm.Designer.cs">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\StudentClass.cs" />
+    <Compile Include="Models\Student.cs" />
     <EmbeddedResource Include="Forms\CourseForm.resx">
       <DependentUpon>CourseForm.cs</DependentUpon>
       <SubType>Designer</SubType>

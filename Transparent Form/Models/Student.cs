@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Transparent_Form
 {
-    class StudentClass
+    public class Student
     {
         DBconnect connect = new DBconnect();
         //create a function to add a new students to the database

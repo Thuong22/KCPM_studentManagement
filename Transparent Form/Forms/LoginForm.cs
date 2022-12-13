@@ -54,26 +54,16 @@ namespace Transparent_Form
         }
         #endregion
 
-        StudentClass student = new StudentClass();
+        Student student = new Student();
         public LoginForm()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 12, 12));
             textBox_usrname.Focus();
-            this.AcceptButton = button_login;
+            this.AcceptButton = btnLogin;
         }
 
-        //private void label6_MouseEnter(object sender, EventArgs e)
-        //{
-        //    label6.ForeColor = Color.Red;
-        //}
-
-        //private void label6_MouseLeave(object sender, EventArgs e)
-        //{
-        //    label6.ForeColor = Color.Transparent;
-        //}
-
-        private void button_login_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             if (textBox_usrname.Text == "" || textBox_password.Text == "")
             {
@@ -100,7 +90,6 @@ namespace Transparent_Form
                     MessageBox.Show("Your username and password are not exists", "Wrong Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -36,7 +36,7 @@ namespace Transparent_Form
             this.textBox_usrname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button_login = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlTop.SuspendLayout();
@@ -131,22 +131,22 @@ namespace Transparent_Form
             this.label4.Text = "Password :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button_login
+            // btnLogin
             // 
-            this.button_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.button_login.FlatAppearance.BorderSize = 0;
-            this.button_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
-            this.button_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
-            this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_login.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_login.ForeColor = System.Drawing.Color.White;
-            this.button_login.Location = new System.Drawing.Point(786, 414);
-            this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(180, 40);
-            this.button_login.TabIndex = 3;
-            this.button_login.Text = "Login";
-            this.button_login.UseVisualStyleBackColor = false;
-            this.button_login.Click += new System.EventHandler(this.button_login_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(786, 414);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(180, 40);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // pictureBox1
             // 
@@ -178,7 +178,7 @@ namespace Transparent_Form
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1150, 652);
-            this.Controls.Add(this.button_login);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.textBox_usrname);
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.label4);
@@ -208,7 +208,7 @@ namespace Transparent_Form
         private System.Windows.Forms.TextBox textBox_usrname;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button_login;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnClose;

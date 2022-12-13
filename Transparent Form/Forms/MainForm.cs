@@ -13,8 +13,8 @@ namespace Transparent_Form
 {
     public partial class MainForm : Form
     {
-        StudentClass student = new StudentClass();
-        CourseClass course = new CourseClass();
+        Student student = new Student();
+        Course course = new Course();
         bool isLogout = false;
         public MainForm()
         {

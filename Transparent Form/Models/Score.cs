@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Transparent_Form
 {
-    class ScoreClass
+    class Score
     {
         DBconnect connect = new DBconnect();
 

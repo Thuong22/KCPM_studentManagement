@@ -14,9 +14,9 @@ namespace Transparent_Form
 {
     public partial class CourseForm : Form
     {
-        StudentClass student = new StudentClass();
-        CourseClass course = new CourseClass();
-        ScoreClass score = new ScoreClass();
+        Student student = new Student();
+        Course course = new Course();
+        Score score = new Score();
         public CourseForm()
         {
             InitializeComponent();
