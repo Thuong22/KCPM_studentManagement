@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using MySql.Data.MySqlClient;
+using System.Threading;
+using static System.Net.Mime.MediaTypeNames;
+using Image = System.Drawing.Image;
 
 namespace Transparent_Form
 {
@@ -27,110 +30,82 @@ namespace Transparent_Form
             //System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
             //dtpBirth.Value.GetDateTimeFormats(culture);
 
-            button_delete.Enabled = false;
-            button_update.Enabled = false;
+            dtgvStudent.AutoGenerateColumns = false;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnClear.Enabled = false;
+            this.ActiveControl = txtSearch;
             dtpBirth.CustomFormat = "dd / MM / yyyy  -  dddd";
-            showTable();
+
+            LoadStudentList();
+            dtgvStudent.ClearSelection();
         }
 
-        public void showTable()
+        public void LoadStudentList()
         {
-            DataGridView_student.DataSource = student.getStudentlist(new MySqlCommand("SELECT * FROM `student`"));
+            dtgvStudent.DataSource = student.GetStudentList("SELECT * FROM `student`");
+            dtgvStudent.Columns[7].GetType();
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-            imageColumn = (DataGridViewImageColumn)DataGridView_student.Columns[7];
+            imageColumn = (DataGridViewImageColumn)dtgvStudent.Columns[7];
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
 
-        private void DataGridView_student_Click(object sender, DataGridViewCellEventArgs e)
+        private void dtgvStudent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox_id.Text = DataGridView_student.CurrentRow.Cells[0].Value.ToString();
-            textBox_Fname.Text = DataGridView_student.CurrentRow.Cells[1].Value.ToString();
-            textBox_Lname.Text = DataGridView_student.CurrentRow.Cells[2].Value.ToString();
-
-            dtpBirth.Value = (DateTime)DataGridView_student.CurrentRow.Cells[3].Value;
-            if (DataGridView_student.CurrentRow.Cells[4].Value.ToString() == "Male")
-                radioButton_male.Checked = true;
-
-            textBox_phone.Text = DataGridView_student.CurrentRow.Cells[5].Value.ToString();
-            textBox_address.Text = DataGridView_student.CurrentRow.Cells[6].Value.ToString();
+            txtId.Text = dtgvStudent.CurrentRow.Cells[0].Value.ToString();
+            txtFName.Text = dtgvStudent.CurrentRow.Cells[1].Value.ToString();
+            txtLName.Text = dtgvStudent.CurrentRow.Cells[2].Value.ToString();
+            dtpBirth.Value = (DateTime)dtgvStudent.CurrentRow.Cells[3].Value;
+            if (dtgvStudent.CurrentRow.Cells[4].Value.ToString() == "Male")
+                rbMale.Checked = true;
+            txtPhone.Text = dtgvStudent.CurrentRow.Cells[5].Value.ToString();
+            txtAddress.Text = dtgvStudent.CurrentRow.Cells[6].Value.ToString();
 
             byte[] img;
             try
             {
-                img = (byte[])DataGridView_student.CurrentRow.Cells[7].Value;
+                img = (byte[])dtgvStudent.CurrentRow.Cells[7].Value;
                 MemoryStream ms = new MemoryStream(img);
-                pictureBox_student.Image = Image.FromStream(ms);
+                pbImage.Image = Image.FromStream(ms);
             }
             catch
             {
                 img = null;
-                pictureBox_student.Image = null;
+                pbImage.Image = null;
             }
+
+            btnDelete.Enabled = true;
+            btnAdd.Enabled = false;
+            btnUpdate.Enabled = true;
+            btnClear.Enabled = true;
         }
 
-        private void button_clear_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-            textBox_id.Clear();
-            textBox_Fname.Clear();
-            textBox_Lname.Clear();
-            textBox_phone.Clear();
-            textBox_address.Clear();
-            radioButton_male.Checked = true;
+            (sender as Button).Enabled = false;
+            txtId.Clear();
+            txtFName.Clear();
+            txtLName.Clear();
+            txtPhone.Clear();
+            txtAddress.Clear();
+            rbMale.Checked = true;
             dtpBirth.Value = DateTime.Now;
-            pictureBox_student.Image = null;
-            button_add.Enabled = true;
-            button_delete.Enabled = false;
-            button_update.Enabled = false;
+            pbImage.Image = null;
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            this.ActiveControl = txtSearch;
+            dtgvStudent.ClearSelection();
         }
 
-        private void button_upload_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            OpenFileDialog opf = new OpenFileDialog();
-            opf.Filter = "Select Photo(*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
-
-            if (opf.ShowDialog() == DialogResult.OK)
-                pictureBox_student.Image = Image.FromFile(opf.FileName);
-        }
-
-        private void button_search_Click(object sender, EventArgs e)
-        {
-            DataGridView_student.DataSource = student.searchStudent(textBox_search.Text);
-            DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-            imageColumn = (DataGridViewImageColumn)DataGridView_student.Columns[7];
-            imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            textBox_search.Clear();
-        }
-
-        #region Validation
-        public bool CheckEmptyField(string lname, string fname, string phone, string address)
-        {
-            if (string.IsNullOrWhiteSpace(fname) || string.IsNullOrWhiteSpace(lname) || string.IsNullOrWhiteSpace(phone) || string.IsNullOrWhiteSpace(address))
-            {
-                return false;
-            }
-            else
-                return true;
-        }
-
-        public bool CheckBirthday(DateTime birthday)
-        {
-            int born_year = birthday.Year;
-            int this_year = DateTime.Now.Year;
-            if ((this_year - born_year) < 10 || (this_year - born_year) > 100)
-                return false;
-            else
-                return true;
-        }
-        #endregion
-
-        private void button_add_Click(object sender, EventArgs e)
-        {
-            string fname = textBox_Fname.Text;
-            string lname = textBox_Lname.Text;
+            string fname = txtFName.Text;
+            string lname = txtLName.Text;
             DateTime bdate = dtpBirth.Value;
-            string phone = textBox_phone.Text;
-            string address = textBox_address.Text;
-            string gender = radioButton_male.Checked ? "Male" : "Female";
+            string phone = txtPhone.Text;
+            string address = txtAddress.Text;
+            string gender = rbMale.Checked ? "Male" : "Female";
 
             if (!CheckBirthday(bdate))
             {
@@ -143,22 +118,20 @@ namespace Transparent_Form
                 try
                 {
                     byte[] img;
-                    if (pictureBox_student.Image != null)
+                    if (pbImage.Image != null)
                     {
                         MemoryStream ms = new MemoryStream();
-                        pictureBox_student.Image.Save(ms, pictureBox_student.Image.RawFormat);
+                        pbImage.Image.Save(ms, pbImage.Image.RawFormat);
                         img = ms.ToArray();
                     }
                     else
-                    {
                         img = null;
-                    }
 
-                    if (student.insertStudent(fname, lname, bdate, gender, phone, address, img))
+                    if (student.InsertStudent(fname, lname, bdate, gender, phone, address, img))
                     {
-                        showTable();
+                        LoadStudentList();
                         MessageBox.Show("Add new student successfully!", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        button_clear.PerformClick();
+                        btnClear.PerformClick();
                     }
                 }
                 catch (Exception ex)
@@ -174,15 +147,15 @@ namespace Transparent_Form
             }
         }
 
-        private void button_update_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBox_id.Text);
-            string fname = textBox_Fname.Text;
-            string lname = textBox_Lname.Text;
+            int id = Convert.ToInt32(txtId.Text);
+            string fname = txtFName.Text;
+            string lname = txtLName.Text;
             DateTime bdate = dtpBirth.Value;
-            string phone = textBox_phone.Text;
-            string address = textBox_address.Text;
-            string gender = radioButton_male.Checked ? "Male" : "Female";
+            string phone = txtPhone.Text;
+            string address = txtAddress.Text;
+            string gender = rbMale.Checked ? "Male" : "Female";
 
             if (!CheckBirthday(bdate))
             {
@@ -195,10 +168,10 @@ namespace Transparent_Form
                 try
                 {
                     byte[] img;
-                    if (pictureBox_student.Image != null)
+                    if (pbImage.Image != null)
                     {
                         MemoryStream ms = new MemoryStream();
-                        pictureBox_student.Image.Save(ms, pictureBox_student.Image.RawFormat);
+                        pbImage.Image.Save(ms, pbImage.Image.RawFormat);
                         img = ms.ToArray();
                     }
                     else
@@ -206,11 +179,11 @@ namespace Transparent_Form
                         img = null;
                     }
 
-                    if (student.updateStudent(id, fname, lname, bdate, gender, phone, address, img))
+                    if (student.UpdateStudent(id, fname, lname, bdate, gender, phone, address, img))
                     {
-                        showTable();
+                        LoadStudentList();
                         MessageBox.Show("Update student data successfully!", "Update Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        button_clear.PerformClick();
+                        btnClear.PerformClick();
                     }
                 }
                 catch (Exception ex)
@@ -226,34 +199,69 @@ namespace Transparent_Form
             }
         }
 
-        private void button_delete_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBox_id.Text);
-            if (MessageBox.Show("Are you sure you want to remove this student", "Remove Student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            int id = Convert.ToInt32(txtId.Text);
+            if (MessageBox.Show("Are you sure you want to remove this student?", "Remove Student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (student.deleteStudent(id))
+                if (student.DeleteStudent(id))
                 {
-                    showTable();
+                    LoadStudentList();
                     MessageBox.Show("Remove student successfully!", "Remove student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    button_clear.PerformClick();
+                    btnClear.PerformClick();
                 }
             }
         }
 
-        private void textBox_id_TextChanged(object sender, EventArgs e)
+        private void btnUpload_Click(object sender, EventArgs e)
         {
-            if (textBox_id.Text == null)
+            var t = new Thread((ThreadStart)(() =>
             {
-                button_add.Enabled = true;
-                button_update.Enabled = false;
-                button_delete.Enabled = false;
-            }
+                OpenFileDialog opf = new OpenFileDialog();
+                opf.Filter = "Select Photo(*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
+
+                if (opf.ShowDialog() == DialogResult.OK)
+                    pbImage.Image = Image.FromFile(opf.FileName);
+            }));
+
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
+            t.Join();
+            btnClear.Enabled = true;
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            var txt = (sender as TextBox);
+            if (txt.Text.Length == 0)
+                LoadStudentList();
             else
             {
-                button_add.Enabled = false;
-                button_update.Enabled = true;
-                button_delete.Enabled = true;
+                dtgvStudent.DataSource = student.SearchStudent(txtSearch.Text);
+                DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+                imageColumn = (DataGridViewImageColumn)dtgvStudent.Columns[7];
+                imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
             }
         }
+
+        #region Validation
+        public bool CheckEmptyField(string lname, string fname, string phone, string address)
+        {
+            if (string.IsNullOrWhiteSpace(fname) || string.IsNullOrWhiteSpace(lname) || string.IsNullOrWhiteSpace(phone) || string.IsNullOrWhiteSpace(address))
+                return false;
+            else
+                return true;
+        }
+
+        public bool CheckBirthday(DateTime birthday)
+        {
+            int born_year = birthday.Year;
+            int this_year = DateTime.Now.Year;
+            if ((this_year - born_year) < 10 || (this_year - born_year) > 100)
+                return false;
+            else
+                return true;
+        }
+        #endregion
     }
 }

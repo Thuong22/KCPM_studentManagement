@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transparent_Form.Models;
 
 namespace Transparent_Form
 {
@@ -58,30 +59,50 @@ namespace Transparent_Form
         bool isLogout = false;
         Form activeForm;
         Button curButton;
-
+        public static Account account;
         public AdminForm()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 12, 12));
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void AdminForm_Load(object sender, EventArgs e)
         {
             pnlSubStudent.Visible = false;
             pnlSubCourse.Visible = false;
             pnlSubScore.Visible = false;
             student = new Student();
+            EnableButton(btnDashboard);
 
             lbTotalStudent.Text = student.GetNumberOfStudents();
             lbMale.Text = student.GetNumberOfMaleStudents();
             lbFemale.Text = student.GetNumberOfFemaleStudents();
+            
+            lbUsername.Text = account.username;
+            lbUsername.Location = new Point(pnlWelcome.Width - (lbUsername.Size.Width + 7), lbUsername.Location.Y);
+            lbWelcome.Location = new Point(pnlWelcome.Width - (lbWelcome.Size.Width + lbUsername.Size.Width + 1), lbWelcome.Location.Y);
 
-            cbbCourse.DataSource = course.getCourse(new MySqlCommand("SELECT * FROM `course`"));
-            cbbCourse.DisplayMember = "CourseName";
-            cbbCourse.ValueMember = "CourseName";
+            //cbbCourse.DataSource = course.getCourse(new MySqlCommand("SELECT * FROM `course`"));
+            //cbbCourse.DisplayMember = "CourseName";
+            //cbbCourse.ValueMember = "CourseName";
         }
 
-        private void hideSubmenu()
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlMain.Controls.Add(childForm);
+            pnlMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void HideSubmenu()
         {
             if (pnlSubStudent.Visible == true)
                 pnlSubStudent.Visible = false;
@@ -95,8 +116,8 @@ namespace Transparent_Form
         {
             if (submenu.Visible == false)
             {
-                hideSubmenu();
-                submenu.Visible = true;       
+                HideSubmenu();
+                submenu.Visible = true;
             }
             else
                 submenu.Visible = false;
@@ -123,6 +144,15 @@ namespace Transparent_Form
             }
         }
 
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            EnableButton(sender as Button);
+            HideSubmenu();
+            if (activeForm != null)
+                activeForm.Close();
+            pnlMain.Controls.Add(pnlCover);
+        }
+
         #region Group of Student button
         private void btnStudent_Click(object sender, EventArgs e)
         {
@@ -130,7 +160,7 @@ namespace Transparent_Form
             ShowSubmenu(pnlSubStudent);
         }
 
-        private void btnManageStd_Click(object sender, EventArgs e)
+        private void btnManageStudent_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ManageStudentForm());
         }
@@ -148,7 +178,7 @@ namespace Transparent_Form
             ShowSubmenu(pnlSubCourse);
         }
 
-        private void btnStudentCourse_Click(object sender, EventArgs e)
+        private void btnStudentInCourse_Click(object sender, EventArgs e)
         {
             OpenChildForm(new CourseForm());
         }
@@ -163,7 +193,7 @@ namespace Transparent_Form
             OpenChildForm(new PrintCourseForm());
         }
 
-        #endregion CourseSubmenu
+        #endregion
 
         #region Group of Score button
         private void btnScore_Click(object sender, EventArgs e)
@@ -181,32 +211,9 @@ namespace Transparent_Form
         {
             OpenChildForm(new PrintScoreForm());
         }
-        #endregion ScoreSubmenu
+        #endregion
 
-        private void OpenChildForm(Form childForm)
-        {
-            if (activeForm != null)
-                activeForm.Close();
-
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            pnlMain.Controls.Add(childForm);
-            pnlMain.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
-        private void button_dashboard_Click(object sender, EventArgs e)
-        {
-            //if (activeForm != null)
-            //    activeForm.Close();
-            //pnlMain.Controls.Add(panel_cover);
-            //studentCount();
-        }
-
-        private void button_exit_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             isLogout = true;
             this.Close();
@@ -219,7 +226,7 @@ namespace Transparent_Form
             //lbCourseFemale.Text = "Female : " + student.ExeCount("SELECT COUNT(*) FROM student INNER JOIN score INNER JOIN course ON student.StdId=score.StudentId AND score.CourseId=course.CourseId WHERE course.CourseName='" + cbbCourse.GetItemText(cbbCourse.SelectedItem) + "' AND `Gender`= 'Female'");
         }
 
-        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (!isLogout)
                 Application.Exit();

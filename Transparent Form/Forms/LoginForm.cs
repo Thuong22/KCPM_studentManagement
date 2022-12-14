@@ -59,6 +59,8 @@ namespace Transparent_Form
         }
         #endregion
 
+        Account account;
+
         public LoginForm()
         {
             InitializeComponent();
@@ -68,6 +70,7 @@ namespace Transparent_Form
         {
             this.AcceptButton = btnLogin;
             this.ActiveControl = txtUsername;
+            account = new Account();   
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -87,11 +90,10 @@ namespace Transparent_Form
                 string user = txtUsername.Text;
                 string pass = txtPassword.Text;
 
-                DataTable table = DataProvider.Instance.ExecuteQuery("SELECT * FROM `user` WHERE `username`= '" + user + "' AND `password`= '" + pass + "'");
+                account = account.GetAccount(user, pass);
 
-                if (table.Rows.Count > 0)
+                if (account != null)
                 {
-                    Account account = new Account(table.Rows[0][0].ToString(), table.Rows[0][1].ToString(), table.Rows[0][2].ToString(), table.Rows[0][3].ToString());
                     if (account.type == 1)
                     {
                         Thread thread = new Thread(new ThreadStart(ShowAdminForm));
@@ -113,6 +115,7 @@ namespace Transparent_Form
 
         private void ShowAdminForm()
         {
+            AdminForm.account = account;
             new AdminForm().ShowDialog();
         }
 
