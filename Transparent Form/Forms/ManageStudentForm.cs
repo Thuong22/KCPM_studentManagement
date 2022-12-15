@@ -74,9 +74,6 @@ namespace Transparent_Form
                 pbImage.Image = null;
             }
 
-            btnDelete.Enabled = true;
-            btnAdd.Enabled = false;
-            btnUpdate.Enabled = true;
             btnClear.Enabled = true;
         }
 
@@ -94,7 +91,7 @@ namespace Transparent_Form
             btnAdd.Enabled = true;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
-            this.ActiveControl = txtSearch;
+            btnClear.Enabled = true;
             dtgvStudent.ClearSelection();
         }
 
@@ -227,7 +224,6 @@ namespace Transparent_Form
             t.SetApartmentState(ApartmentState.STA);
             t.Start();
             t.Join();
-            btnClear.Enabled = true;
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -241,6 +237,22 @@ namespace Transparent_Form
                 DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
                 imageColumn = (DataGridViewImageColumn)dtgvStudent.Columns[7];
                 imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            }
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+            if (txtId.Text == null)
+            {
+                btnAdd.Enabled = true;
+                btnUpdate.Enabled = false;
+                btnDelete.Enabled = false;
+            }
+            else
+            {
+                btnAdd.Enabled = false;
+                btnUpdate.Enabled = true;
+                btnDelete.Enabled = true;
             }
         }
 

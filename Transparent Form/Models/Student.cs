@@ -13,14 +13,6 @@ namespace Transparent_Form
     {
         DBconnect connect = new DBconnect();
 
-        public int id { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public string birth { get; set; }
-        public string gender { get; set; }
-        public string phone { get; set; }
-        public string address { get; set; }
-
         public DataTable GetStudentList(string query)
         {
             MySqlCommand command = new MySqlCommand(query, connect.GetConnection);

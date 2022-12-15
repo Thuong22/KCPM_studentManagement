@@ -12,7 +12,7 @@ namespace Transparent_Form
     {
         DBconnect connect = new DBconnect();
 
-        public bool insertScore(int stdid, int courid)
+        public bool InsertScore(int stdid, int courid)
         {
             MySqlCommand command = new MySqlCommand("INSERT INTO `score`(`StudentId`, `CourseId`) VALUES (@stid,@cid)", connect.GetConnection);
             //@stid,@cn,@sco,@desc
@@ -69,10 +69,9 @@ namespace Transparent_Form
             }
         }
 
-        public bool deleteScore(int sid, int cid)
+        public bool DeleteScore(int sid, int cid)
         {
             MySqlCommand command = new MySqlCommand("DELETE FROM `score` WHERE `StudentId`=@sid AND `CourseId`=@cid", connect.GetConnection);
-
             command.Parameters.Add("@sid", MySqlDbType.Int32).Value = sid;
             command.Parameters.Add("@cid", MySqlDbType.Int32).Value = cid;
 

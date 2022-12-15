@@ -70,7 +70,6 @@ namespace Transparent_Form
         {
             this.AcceptButton = btnLogin;
             this.ActiveControl = txtUsername;
-            account = new Account();   
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -89,7 +88,7 @@ namespace Transparent_Form
             {
                 string user = txtUsername.Text;
                 string pass = txtPassword.Text;
-
+                account = new Account();
                 account = account.GetAccount(user, pass);
 
                 if (account != null)

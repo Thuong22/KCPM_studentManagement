@@ -29,9 +29,8 @@ namespace Transparent_Form
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,16 +61,16 @@ namespace Transparent_Form
             this.panel8 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.dtgvStudent = new System.Windows.Forms.DataGridView();
+            this.sId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sFname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sLname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sBirthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPhoto = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.sPhoto = new System.Windows.Forms.DataGridViewImageColumn();
-            this.sAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sBirthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sLname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sFname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -291,11 +290,12 @@ namespace Transparent_Form
             // 
             this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtId.BackColor = System.Drawing.SystemColors.Control;
-            this.txtId.Location = new System.Drawing.Point(850, 24);
+            this.txtId.Location = new System.Drawing.Point(845, 24);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(83, 27);
+            this.txtId.Size = new System.Drawing.Size(88, 27);
             this.txtId.TabIndex = 31;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // panel3
             // 
@@ -423,7 +423,7 @@ namespace Transparent_Form
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label7.Location = new System.Drawing.Point(8, 10);
+            this.label7.Location = new System.Drawing.Point(0, 10);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(190, 25);
             this.label7.TabIndex = 38;
@@ -433,20 +433,18 @@ namespace Transparent_Form
             // 
             this.dtgvStudent.AllowUserToAddRows = false;
             this.dtgvStudent.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgvStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvStudent.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dtgvStudent.BackgroundColor = System.Drawing.Color.White;
             this.dtgvStudent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvStudent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvStudent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sId,
@@ -457,14 +455,14 @@ namespace Transparent_Form
             this.sPhone,
             this.sAddress,
             this.sPhoto});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvStudent.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvStudent.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvStudent.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgvStudent.EnableHeadersVisualStyles = false;
             this.dtgvStudent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
@@ -478,6 +476,84 @@ namespace Transparent_Form
             this.dtgvStudent.Size = new System.Drawing.Size(930, 281);
             this.dtgvStudent.TabIndex = 37;
             this.dtgvStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvStudent_CellClick);
+            // 
+            // sId
+            // 
+            this.sId.DataPropertyName = "StdId";
+            this.sId.FillWeight = 45.51423F;
+            this.sId.HeaderText = "ID";
+            this.sId.MinimumWidth = 6;
+            this.sId.Name = "sId";
+            this.sId.ReadOnly = true;
+            this.sId.Width = 50;
+            // 
+            // sFname
+            // 
+            this.sFname.DataPropertyName = "StdFirstName";
+            this.sFname.FillWeight = 116.9772F;
+            this.sFname.HeaderText = "First Name";
+            this.sFname.MinimumWidth = 6;
+            this.sFname.Name = "sFname";
+            this.sFname.ReadOnly = true;
+            this.sFname.Width = 120;
+            // 
+            // sLname
+            // 
+            this.sLname.DataPropertyName = "StdLastName";
+            this.sLname.FillWeight = 125.4797F;
+            this.sLname.HeaderText = "Last Name";
+            this.sLname.MinimumWidth = 6;
+            this.sLname.Name = "sLname";
+            this.sLname.ReadOnly = true;
+            this.sLname.Width = 120;
+            // 
+            // sBirthday
+            // 
+            this.sBirthday.DataPropertyName = "Birthdate";
+            this.sBirthday.FillWeight = 76.52427F;
+            this.sBirthday.HeaderText = "Birth";
+            this.sBirthday.MinimumWidth = 6;
+            this.sBirthday.Name = "sBirthday";
+            this.sBirthday.ReadOnly = true;
+            this.sBirthday.Width = 104;
+            // 
+            // sGender
+            // 
+            this.sGender.DataPropertyName = "Gender";
+            this.sGender.FillWeight = 114.7856F;
+            this.sGender.HeaderText = "Gender";
+            this.sGender.MinimumWidth = 6;
+            this.sGender.Name = "sGender";
+            this.sGender.ReadOnly = true;
+            // 
+            // sPhone
+            // 
+            this.sPhone.DataPropertyName = "Phone";
+            this.sPhone.FillWeight = 106.313F;
+            this.sPhone.HeaderText = "Phone";
+            this.sPhone.MinimumWidth = 6;
+            this.sPhone.Name = "sPhone";
+            this.sPhone.ReadOnly = true;
+            this.sPhone.Width = 120;
+            // 
+            // sAddress
+            // 
+            this.sAddress.DataPropertyName = "Address";
+            this.sAddress.FillWeight = 129.2294F;
+            this.sAddress.HeaderText = "Address";
+            this.sAddress.MinimumWidth = 6;
+            this.sAddress.Name = "sAddress";
+            this.sAddress.ReadOnly = true;
+            this.sAddress.Width = 200;
+            // 
+            // sPhoto
+            // 
+            this.sPhoto.DataPropertyName = "Photo";
+            this.sPhoto.FillWeight = 85.1768F;
+            this.sPhoto.HeaderText = "Photo";
+            this.sPhoto.MinimumWidth = 6;
+            this.sPhoto.Name = "sPhoto";
+            this.sPhoto.ReadOnly = true;
             // 
             // txtSearch
             // 
@@ -499,84 +575,6 @@ namespace Transparent_Form
             this.label9.Size = new System.Drawing.Size(67, 19);
             this.label9.TabIndex = 19;
             this.label9.Text = "Search:";
-            // 
-            // sPhoto
-            // 
-            this.sPhoto.DataPropertyName = "Photo";
-            this.sPhoto.FillWeight = 85.1768F;
-            this.sPhoto.HeaderText = "Photo";
-            this.sPhoto.MinimumWidth = 6;
-            this.sPhoto.Name = "sPhoto";
-            this.sPhoto.ReadOnly = true;
-            // 
-            // sAddress
-            // 
-            this.sAddress.DataPropertyName = "Address";
-            this.sAddress.FillWeight = 129.2294F;
-            this.sAddress.HeaderText = "Address";
-            this.sAddress.MinimumWidth = 6;
-            this.sAddress.Name = "sAddress";
-            this.sAddress.ReadOnly = true;
-            this.sAddress.Width = 200;
-            // 
-            // sPhone
-            // 
-            this.sPhone.DataPropertyName = "Phone";
-            this.sPhone.FillWeight = 106.313F;
-            this.sPhone.HeaderText = "Phone";
-            this.sPhone.MinimumWidth = 6;
-            this.sPhone.Name = "sPhone";
-            this.sPhone.ReadOnly = true;
-            this.sPhone.Width = 120;
-            // 
-            // sGender
-            // 
-            this.sGender.DataPropertyName = "Gender";
-            this.sGender.FillWeight = 114.7856F;
-            this.sGender.HeaderText = "Gender";
-            this.sGender.MinimumWidth = 6;
-            this.sGender.Name = "sGender";
-            this.sGender.ReadOnly = true;
-            // 
-            // sBirthday
-            // 
-            this.sBirthday.DataPropertyName = "Birthdate";
-            this.sBirthday.FillWeight = 76.52427F;
-            this.sBirthday.HeaderText = "Birth";
-            this.sBirthday.MinimumWidth = 6;
-            this.sBirthday.Name = "sBirthday";
-            this.sBirthday.ReadOnly = true;
-            this.sBirthday.Width = 104;
-            // 
-            // sLname
-            // 
-            this.sLname.DataPropertyName = "StdLastName";
-            this.sLname.FillWeight = 125.4797F;
-            this.sLname.HeaderText = "Last Name";
-            this.sLname.MinimumWidth = 6;
-            this.sLname.Name = "sLname";
-            this.sLname.ReadOnly = true;
-            this.sLname.Width = 120;
-            // 
-            // sFname
-            // 
-            this.sFname.DataPropertyName = "StdFirstName";
-            this.sFname.FillWeight = 116.9772F;
-            this.sFname.HeaderText = "First Name";
-            this.sFname.MinimumWidth = 6;
-            this.sFname.Name = "sFname";
-            this.sFname.ReadOnly = true;
-            this.sFname.Width = 120;
-            // 
-            // sId
-            // 
-            this.sId.DataPropertyName = "StdId";
-            this.sId.FillWeight = 45.51423F;
-            this.sId.HeaderText = "ID";
-            this.sId.MinimumWidth = 6;
-            this.sId.Name = "sId";
-            this.sId.ReadOnly = true;
-            this.sId.Width = 50;
             // 
             // ManageStudentForm
             // 

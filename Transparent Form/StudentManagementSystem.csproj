@@ -96,11 +96,11 @@
   <ItemGroup>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Course.cs" />
-    <Compile Include="Forms\CourseForm.cs">
+    <Compile Include="Forms\StudentsInCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CourseForm.Designer.cs">
-      <DependentUpon>CourseForm.cs</DependentUpon>
+    <Compile Include="Forms\StudentsInCourseForm.Designer.cs">
+      <DependentUpon>StudentsInCourseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DBconnect.cs" />
     <Compile Include="DGVPrinter.cs" />
@@ -146,11 +146,11 @@
     <Compile Include="Forms\PrintScoreForm.Designer.cs">
       <DependentUpon>PrintScoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PrintStudent.cs">
+    <Compile Include="Forms\PrintStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\PrintStudent.Designer.cs">
-      <DependentUpon>PrintStudent.cs</DependentUpon>
+    <Compile Include="Forms\PrintStudentForm.Designer.cs">
+      <DependentUpon>PrintStudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\DataProvider.cs" />
     <Compile Include="Program.cs" />
@@ -168,8 +168,8 @@
       <DependentUpon>SplashForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Student.cs" />
-    <EmbeddedResource Include="Forms\CourseForm.resx">
-      <DependentUpon>CourseForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\StudentsInCourseForm.resx">
+      <DependentUpon>StudentsInCourseForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
@@ -193,8 +193,8 @@
     <EmbeddedResource Include="Forms\PrintScoreForm.resx">
       <DependentUpon>PrintScoreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PrintStudent.resx">
-      <DependentUpon>PrintStudent.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PrintStudentForm.resx">
+      <DependentUpon>PrintStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

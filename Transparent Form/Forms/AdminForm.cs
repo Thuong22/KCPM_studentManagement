@@ -167,7 +167,7 @@ namespace Transparent_Form
 
         private void btnStudentPrint_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new PrintStudent());
+            OpenChildForm(new PrintStudentForm());
         }
         #endregion
 
@@ -180,7 +180,7 @@ namespace Transparent_Form
 
         private void btnStudentInCourse_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new CourseForm());
+            OpenChildForm(new StudentInCourseForm());
         }
 
         private void btnManageCourse_Click(object sender, EventArgs e)
