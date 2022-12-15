@@ -94,6 +94,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Forms\StudentsInCourseForm.cs">
@@ -168,6 +174,9 @@
       <DependentUpon>SplashForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Student.cs" />
+    <EmbeddedResource Include="Forms\StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\StudentsInCourseForm.resx">
       <DependentUpon>StudentsInCourseForm.cs</DependentUpon>
       <SubType>Designer</SubType>

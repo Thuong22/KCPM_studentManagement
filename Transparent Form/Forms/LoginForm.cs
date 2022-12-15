@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using NUnit.Framework.Interfaces;
 using NUnit.Framework.Internal;
+using Transparent_Form.Forms;
 using Transparent_Form.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -100,7 +101,8 @@ namespace Transparent_Form
                     }
                     else if (account.type == 2)
                     {
-
+                        Thread thread = new Thread(new ThreadStart(ShowStudentForm));
+                        thread.Start();
                     }
                 }
                 else
@@ -113,14 +115,15 @@ namespace Transparent_Form
 
         private void ShowAdminForm()
         {
-            Thread t = new Thread(delegate () {
-                AdminForm.account = account;
-                new AdminForm().ShowDialog();
+            Thread t = new Thread(delegate ()
+            {
                 if (this.InvokeRequired)
                 {
                     this.Invoke(new MethodInvoker(delegate
                     {
                         this.Close();
+                        AdminForm.account = account;
+                        new AdminForm().ShowDialog();
                         new LoginForm().Show();
                     }));
                 }
@@ -130,9 +133,20 @@ namespace Transparent_Form
 
         private void ShowStudentForm()
         {
-            //this.Close();
-            //AdminForm form = new AdminForm();
-            //form.ShowDialog();
+            Thread t = new Thread(delegate ()
+            {
+                if (this.InvokeRequired)
+                {
+                    this.Invoke(new MethodInvoker(delegate
+                    {
+                        this.Close();
+                        //AdminForm.account = account;
+                        new StudentForm().ShowDialog();
+                        new LoginForm().Show();
+                    }));
+                }
+            });
+            t.Start();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -31,9 +31,7 @@ namespace Transparent_Form
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.pnlSlide = new System.Windows.Forms.Panel();
+            this.pnlNavigation = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlSubScore = new System.Windows.Forms.Panel();
             this.btnScorePrint = new System.Windows.Forms.Button();
@@ -43,7 +41,7 @@ namespace Transparent_Form
             this.btnCoursePrint = new System.Windows.Forms.Button();
             this.btnManageCourse = new System.Windows.Forms.Button();
             this.btnStudentInCourse = new System.Windows.Forms.Button();
-            this.btnCourse = new System.Windows.Forms.Button();
+            this.btnCourses = new System.Windows.Forms.Button();
             this.pnlSubStudent = new System.Windows.Forms.Panel();
             this.btnStudentPrint = new System.Windows.Forms.Button();
             this.btnManageStudent = new System.Windows.Forms.Button();
@@ -51,7 +49,6 @@ namespace Transparent_Form
             this.btnDashboard = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlCover = new System.Windows.Forms.Panel();
-            this.pbCover = new System.Windows.Forms.PictureBox();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.lbCourseFemale = new System.Windows.Forms.Label();
@@ -67,16 +64,19 @@ namespace Transparent_Form
             this.label7 = new System.Windows.Forms.Label();
             this.lbUsername = new System.Windows.Forms.Label();
             this.lbWelcome = new System.Windows.Forms.Label();
+            this.pbCover = new System.Windows.Forms.PictureBox();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
-            this.pnlSlide.SuspendLayout();
+            this.pnlNavigation.SuspendLayout();
             this.pnlSubScore.SuspendLayout();
             this.pnlSubCourse.SuspendLayout();
             this.pnlSubStudent.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.pnlCover.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCover)).BeginInit();
             this.pnlBottom.SuspendLayout();
             this.pnlWelcome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCover)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTop
@@ -90,54 +90,25 @@ namespace Transparent_Form
             this.pnlTop.TabIndex = 0;
             this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
             // 
-            // btnClose
+            // pnlNavigation
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = global::Transparent_Form.Properties.Resources.icon_close;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1111, 5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 36);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackColor = System.Drawing.Color.White;
-            this.pnlLogo.BackgroundImage = global::Transparent_Form.Properties.Resources.Logo_SmallBlue;
-            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Margin = new System.Windows.Forms.Padding(5);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(183, 92);
-            this.pnlLogo.TabIndex = 0;
-            // 
-            // pnlSlide
-            // 
-            this.pnlSlide.AutoScroll = true;
-            this.pnlSlide.BackColor = System.Drawing.Color.White;
-            this.pnlSlide.Controls.Add(this.btnExit);
-            this.pnlSlide.Controls.Add(this.pnlSubScore);
-            this.pnlSlide.Controls.Add(this.btnScore);
-            this.pnlSlide.Controls.Add(this.pnlSubCourse);
-            this.pnlSlide.Controls.Add(this.btnCourse);
-            this.pnlSlide.Controls.Add(this.pnlSubStudent);
-            this.pnlSlide.Controls.Add(this.btnStudent);
-            this.pnlSlide.Controls.Add(this.btnDashboard);
-            this.pnlSlide.Controls.Add(this.pnlLogo);
-            this.pnlSlide.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSlide.Location = new System.Drawing.Point(0, 40);
-            this.pnlSlide.Margin = new System.Windows.Forms.Padding(5);
-            this.pnlSlide.Name = "pnlSlide";
-            this.pnlSlide.Size = new System.Drawing.Size(200, 610);
-            this.pnlSlide.TabIndex = 2;
+            this.pnlNavigation.AutoScroll = true;
+            this.pnlNavigation.BackColor = System.Drawing.Color.White;
+            this.pnlNavigation.Controls.Add(this.btnExit);
+            this.pnlNavigation.Controls.Add(this.pnlSubScore);
+            this.pnlNavigation.Controls.Add(this.btnScore);
+            this.pnlNavigation.Controls.Add(this.pnlSubCourse);
+            this.pnlNavigation.Controls.Add(this.btnCourses);
+            this.pnlNavigation.Controls.Add(this.pnlSubStudent);
+            this.pnlNavigation.Controls.Add(this.btnStudent);
+            this.pnlNavigation.Controls.Add(this.btnDashboard);
+            this.pnlNavigation.Controls.Add(this.pnlLogo);
+            this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlNavigation.Location = new System.Drawing.Point(0, 40);
+            this.pnlNavigation.Margin = new System.Windows.Forms.Padding(5);
+            this.pnlNavigation.Name = "pnlNavigation";
+            this.pnlNavigation.Size = new System.Drawing.Size(200, 610);
+            this.pnlNavigation.TabIndex = 2;
             // 
             // btnExit
             // 
@@ -148,7 +119,7 @@ namespace Transparent_Form
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnExit.Location = new System.Drawing.Point(0, 663);
+            this.btnExit.Location = new System.Drawing.Point(0, 662);
             this.btnExit.Margin = new System.Windows.Forms.Padding(5);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -165,7 +136,7 @@ namespace Transparent_Form
             this.pnlSubScore.Controls.Add(this.btnScorePrint);
             this.pnlSubScore.Controls.Add(this.btnManageScore);
             this.pnlSubScore.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubScore.Location = new System.Drawing.Point(0, 563);
+            this.pnlSubScore.Location = new System.Drawing.Point(0, 562);
             this.pnlSubScore.Name = "pnlSubScore";
             this.pnlSubScore.Size = new System.Drawing.Size(183, 100);
             this.pnlSubScore.TabIndex = 17;
@@ -217,7 +188,7 @@ namespace Transparent_Form
             this.btnScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScore.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnScore.Location = new System.Drawing.Point(0, 508);
+            this.btnScore.Location = new System.Drawing.Point(0, 507);
             this.btnScore.Margin = new System.Windows.Forms.Padding(5);
             this.btnScore.Name = "btnScore";
             this.btnScore.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -237,7 +208,7 @@ namespace Transparent_Form
             this.pnlSubCourse.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubCourse.Location = new System.Drawing.Point(0, 357);
             this.pnlSubCourse.Name = "pnlSubCourse";
-            this.pnlSubCourse.Size = new System.Drawing.Size(183, 151);
+            this.pnlSubCourse.Size = new System.Drawing.Size(183, 150);
             this.pnlSubCourse.TabIndex = 15;
             // 
             // btnCoursePrint
@@ -252,7 +223,7 @@ namespace Transparent_Form
             this.btnCoursePrint.Location = new System.Drawing.Point(0, 100);
             this.btnCoursePrint.Name = "btnCoursePrint";
             this.btnCoursePrint.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCoursePrint.Size = new System.Drawing.Size(183, 51);
+            this.btnCoursePrint.Size = new System.Drawing.Size(183, 50);
             this.btnCoursePrint.TabIndex = 3;
             this.btnCoursePrint.Text = "Print";
             this.btnCoursePrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -297,25 +268,25 @@ namespace Transparent_Form
             this.btnStudentInCourse.UseVisualStyleBackColor = false;
             this.btnStudentInCourse.Click += new System.EventHandler(this.btnStudentInCourse_Click);
             // 
-            // btnCourse
+            // btnCourses
             // 
-            this.btnCourse.BackColor = System.Drawing.Color.White;
-            this.btnCourse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCourse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCourse.FlatAppearance.BorderSize = 0;
-            this.btnCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCourse.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnCourse.Location = new System.Drawing.Point(0, 302);
-            this.btnCourse.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCourse.Name = "btnCourse";
-            this.btnCourse.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCourse.Size = new System.Drawing.Size(183, 55);
-            this.btnCourse.TabIndex = 14;
-            this.btnCourse.Text = "Course";
-            this.btnCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCourse.UseVisualStyleBackColor = false;
-            this.btnCourse.Click += new System.EventHandler(this.btnCourse_Click);
+            this.btnCourses.BackColor = System.Drawing.Color.White;
+            this.btnCourses.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCourses.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCourses.FlatAppearance.BorderSize = 0;
+            this.btnCourses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCourses.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCourses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnCourses.Location = new System.Drawing.Point(0, 302);
+            this.btnCourses.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCourses.Name = "btnCourses";
+            this.btnCourses.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCourses.Size = new System.Drawing.Size(183, 55);
+            this.btnCourses.TabIndex = 14;
+            this.btnCourses.Text = "Courses";
+            this.btnCourses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCourses.UseVisualStyleBackColor = false;
+            this.btnCourses.Click += new System.EventHandler(this.btnCourse_Click);
             // 
             // pnlSubStudent
             // 
@@ -425,17 +396,6 @@ namespace Transparent_Form
             this.pnlCover.Name = "pnlCover";
             this.pnlCover.Size = new System.Drawing.Size(950, 610);
             this.pnlCover.TabIndex = 1;
-            // 
-            // pbCover
-            // 
-            this.pbCover.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbCover.Image = ((System.Drawing.Image)(resources.GetObject("pbCover.Image")));
-            this.pbCover.Location = new System.Drawing.Point(0, 46);
-            this.pbCover.Name = "pbCover";
-            this.pbCover.Size = new System.Drawing.Size(950, 484);
-            this.pbCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCover.TabIndex = 8;
-            this.pbCover.TabStop = false;
             // 
             // pnlBottom
             // 
@@ -623,13 +583,53 @@ namespace Transparent_Form
             this.lbWelcome.TabIndex = 0;
             this.lbWelcome.Text = "Welcome,";
             // 
+            // pbCover
+            // 
+            this.pbCover.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbCover.Image = ((System.Drawing.Image)(resources.GetObject("pbCover.Image")));
+            this.pbCover.Location = new System.Drawing.Point(0, 46);
+            this.pbCover.Name = "pbCover";
+            this.pbCover.Size = new System.Drawing.Size(950, 484);
+            this.pbCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCover.TabIndex = 8;
+            this.pbCover.TabStop = false;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.BackColor = System.Drawing.Color.White;
+            this.pnlLogo.BackgroundImage = global::Transparent_Form.Properties.Resources.Logo_SmallBlue;
+            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Margin = new System.Windows.Forms.Padding(5);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(183, 92);
+            this.pnlLogo.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::Transparent_Form.Properties.Resources.icon_close;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1111, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(36, 36);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 650);
             this.Controls.Add(this.pnlMain);
-            this.Controls.Add(this.pnlSlide);
+            this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.pnlTop);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -643,17 +643,17 @@ namespace Transparent_Form
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.pnlTop.ResumeLayout(false);
-            this.pnlSlide.ResumeLayout(false);
+            this.pnlNavigation.ResumeLayout(false);
             this.pnlSubScore.ResumeLayout(false);
             this.pnlSubCourse.ResumeLayout(false);
             this.pnlSubStudent.ResumeLayout(false);
             this.pnlMain.ResumeLayout(false);
             this.pnlCover.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbCover)).EndInit();
             this.pnlBottom.ResumeLayout(false);
             this.pnlBottom.PerformLayout();
             this.pnlWelcome.ResumeLayout(false);
             this.pnlWelcome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCover)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -663,7 +663,7 @@ namespace Transparent_Form
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel pnlLogo;
-        private System.Windows.Forms.Panel pnlSlide;
+        private System.Windows.Forms.Panel pnlNavigation;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel pnlSubScore;
         private System.Windows.Forms.Button btnScorePrint;
@@ -673,7 +673,7 @@ namespace Transparent_Form
         private System.Windows.Forms.Button btnCoursePrint;
         private System.Windows.Forms.Button btnManageCourse;
         private System.Windows.Forms.Button btnStudentInCourse;
-        private System.Windows.Forms.Button btnCourse;
+        private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Panel pnlSubStudent;
         private System.Windows.Forms.Button btnStudentPrint;
         private System.Windows.Forms.Button btnManageStudent;
