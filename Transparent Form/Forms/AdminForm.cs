@@ -77,14 +77,14 @@ namespace Transparent_Form
             lbTotalStudent.Text = student.GetNumberOfStudents();
             lbMale.Text = student.GetNumberOfMaleStudents();
             lbFemale.Text = student.GetNumberOfFemaleStudents();
-            
+
             lbUsername.Text = account.username;
             lbUsername.Location = new Point(pnlWelcome.Width - (lbUsername.Size.Width + 7), lbUsername.Location.Y);
             lbWelcome.Location = new Point(pnlWelcome.Width - (lbWelcome.Size.Width + lbUsername.Size.Width + 1), lbWelcome.Location.Y);
 
-            //cbbCourse.DataSource = course.getCourse(new MySqlCommand("SELECT * FROM `course`"));
-            //cbbCourse.DisplayMember = "CourseName";
-            //cbbCourse.ValueMember = "CourseName";
+            cbbCourse.DataSource = course.GetCourseList("SELECT * FROM `course`");
+            cbbCourse.DisplayMember = "CourseName";
+            cbbCourse.ValueMember = "CourseName";
         }
 
         private void OpenChildForm(Form childForm)
@@ -219,11 +219,11 @@ namespace Transparent_Form
             this.Close();
         }
 
-        private void comboBox_course_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbbCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
             string txt = cbbCourse.GetItemText(cbbCourse.SelectedItem);
-            //lbCourseMale.Text = "Male : " + student.ExeCount("SELECT COUNT(*) FROM student INNER JOIN score INNER JOIN course ON student.StdId=score.StudentId AND score.CourseId=course.CourseId WHERE course.CourseName='" + cbbCourse.GetItemText(cbbCourse.SelectedItem) +"' AND `Gender`= 'Male'");
-            //lbCourseFemale.Text = "Female : " + student.ExeCount("SELECT COUNT(*) FROM student INNER JOIN score INNER JOIN course ON student.StdId=score.StudentId AND score.CourseId=course.CourseId WHERE course.CourseName='" + cbbCourse.GetItemText(cbbCourse.SelectedItem) + "' AND `Gender`= 'Female'");
+            lbCourseMale.Text = "Male : " + DataProvider.Instance.ExecuteScalar($"SELECT COUNT(*) FROM student INNER JOIN score INNER JOIN course ON student.StdId=score.StudentId AND score.CourseId=course.CourseId WHERE course.CourseName='" + txt + "' AND `Gender`= 'Male'");
+            lbCourseFemale.Text = "Female : " + DataProvider.Instance.ExecuteScalar($"SELECT COUNT(*) FROM student INNER JOIN score INNER JOIN course ON student.StdId=score.StudentId AND score.CourseId=course.CourseId WHERE course.CourseName='" + txt + "' AND `Gender`= 'Female'");
         }
 
         private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -235,7 +235,6 @@ namespace Transparent_Form
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            new LoginForm();
         }
     }
 }

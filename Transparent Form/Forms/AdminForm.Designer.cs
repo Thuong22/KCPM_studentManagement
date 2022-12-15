@@ -504,6 +504,7 @@ namespace Transparent_Form
             this.cbbCourse.Name = "cbbCourse";
             this.cbbCourse.Size = new System.Drawing.Size(403, 29);
             this.cbbCourse.TabIndex = 3;
+            this.cbbCourse.SelectedIndexChanged += new System.EventHandler(this.cbbCourse_SelectedIndexChanged);
             // 
             // lbFemale
             // 

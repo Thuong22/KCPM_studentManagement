@@ -12,13 +12,29 @@ namespace Transparent_Form
     {
         DBconnect connect = new DBconnect();
 
+        public DataTable GetScoreList(string query)
+        {
+            MySqlCommand command = new MySqlCommand(query, connect.GetConnection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+        public bool CheckScore(int stdId, int cId)
+        {
+            DataTable table = GetScoreList("SELECT * FROM `score` WHERE `StudentId`= '" + stdId + "' AND `CourseId`= '" + cId + "'");
+            if (table.Rows.Count > 0)
+            { return true; }
+            else
+            { return false; }
+        }
+
         public bool InsertScore(int stdid, int courid)
         {
             MySqlCommand command = new MySqlCommand("INSERT INTO `score`(`StudentId`, `CourseId`) VALUES (@stid,@cid)", connect.GetConnection);
-            //@stid,@cn,@sco,@desc
             command.Parameters.Add("@stid", MySqlDbType.Int32).Value = stdid;
             command.Parameters.Add("@cid", MySqlDbType.Int32).Value = courid;
-            
+
             connect.OpenConnect();
             if (command.ExecuteNonQuery() == 1)
             {
@@ -32,24 +48,7 @@ namespace Transparent_Form
             }
         }
 
-        public DataTable getList(MySqlCommand command)
-        {
-            command.Connection = connect.GetConnection;
-            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            return table;
-        }
-        public bool checkScore(int stdId, int cId)
-        {
-            DataTable table = getList(new MySqlCommand("SELECT * FROM `score` WHERE `StudentId`= '" + stdId + "' AND `CourseId`= '" + cId + "'"));
-            if (table.Rows.Count > 0)
-            { return true; }
-            else
-            { return false; }
-        }
-
-        public bool updateScore(int stdid, int scid, Nullable<double> scor, string desc)
+        public bool UpdateScore(int stdid, int scid, Nullable<double> scor, string desc)
         {
             MySqlCommand command = new MySqlCommand("UPDATE `score` SET `Score`=@sco,`Description`=@desc WHERE `StudentId`=@stid AND `CourseId`=@scid", connect.GetConnection);
             command.Parameters.Add("@scid", MySqlDbType.Int32).Value = scid;

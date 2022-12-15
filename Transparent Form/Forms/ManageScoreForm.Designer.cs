@@ -29,32 +29,31 @@ namespace Transparent_Form
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.textBox_search = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox_courName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox_stdName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_description = new System.Windows.Forms.TextBox();
-            this.textBox_score = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox_stdId = new System.Windows.Forms.TextBox();
+            this.txtCourseName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtStudentName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtComment = new System.Windows.Forms.TextBox();
+            this.txtScore = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button_clear = new System.Windows.Forms.Button();
-            this.button_update = new System.Windows.Forms.Button();
-            this.button_search = new System.Windows.Forms.Button();
-            this.DataGridView_score = new System.Windows.Forms.DataGridView();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtgvScore = new System.Windows.Forms.DataGridView();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.sId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sFname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sLname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,163 +61,60 @@ namespace Transparent_Form
             this.cName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.scr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.scrDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView_score)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvScore)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox_search
-            // 
-            this.textBox_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_search.Location = new System.Drawing.Point(642, 55);
-            this.textBox_search.Name = "textBox_search";
-            this.textBox_search.Size = new System.Drawing.Size(156, 32);
-            this.textBox_search.TabIndex = 39;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(934, 46);
-            this.panel1.TabIndex = 37;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(208, 32);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Manage Score";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.textBox_courName);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox_stdName);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox_description);
-            this.panel2.Controls.Add(this.textBox_score);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox_stdId);
+            this.panel2.Controls.Add(this.txtCourseName);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtStudentName);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txtComment);
+            this.panel2.Controls.Add(this.txtScore);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.txtId);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.button_clear);
-            this.panel2.Controls.Add(this.button_update);
+            this.panel2.Controls.Add(this.btnClear);
+            this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 378);
+            this.panel2.Location = new System.Drawing.Point(0, 375);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(934, 235);
+            this.panel2.Size = new System.Drawing.Size(950, 235);
             this.panel2.TabIndex = 38;
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(924, 10);
+            this.panel7.Location = new System.Drawing.Point(940, 10);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(10, 225);
             this.panel7.TabIndex = 46;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 10);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 225);
             this.panel5.TabIndex = 45;
             // 
-            // textBox_courName
+            // txtCourseName
             // 
-            this.textBox_courName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_courName.Location = new System.Drawing.Point(635, 42);
-            this.textBox_courName.Name = "textBox_courName";
-            this.textBox_courName.ReadOnly = true;
-            this.textBox_courName.Size = new System.Drawing.Size(250, 32);
-            this.textBox_courName.TabIndex = 44;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label3.Location = new System.Drawing.Point(582, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 23);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Course :";
-            // 
-            // textBox_stdName
-            // 
-            this.textBox_stdName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_stdName.Location = new System.Drawing.Point(364, 42);
-            this.textBox_stdName.Name = "textBox_stdName";
-            this.textBox_stdName.ReadOnly = true;
-            this.textBox_stdName.Size = new System.Drawing.Size(200, 32);
-            this.textBox_stdName.TabIndex = 42;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label2.Location = new System.Drawing.Point(239, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 23);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "Student Name :";
-            // 
-            // textBox_description
-            // 
-            this.textBox_description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_description.Location = new System.Drawing.Point(426, 95);
-            this.textBox_description.Multiline = true;
-            this.textBox_description.Name = "textBox_description";
-            this.textBox_description.Size = new System.Drawing.Size(459, 71);
-            this.textBox_description.TabIndex = 40;
-            // 
-            // textBox_score
-            // 
-            this.textBox_score.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_score.Location = new System.Drawing.Point(133, 95);
-            this.textBox_score.Name = "textBox_score";
-            this.textBox_score.Size = new System.Drawing.Size(135, 32);
-            this.textBox_score.TabIndex = 39;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label4.Location = new System.Drawing.Point(33, 98);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 23);
-            this.label4.TabIndex = 38;
-            this.label4.Text = "Score :";
-            // 
-            // textBox_stdId
-            // 
-            this.textBox_stdId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_stdId.Location = new System.Drawing.Point(133, 42);
-            this.textBox_stdId.Name = "textBox_stdId";
-            this.textBox_stdId.ReadOnly = true;
-            this.textBox_stdId.Size = new System.Drawing.Size(75, 32);
-            this.textBox_stdId.TabIndex = 37;
-            this.textBox_stdId.TextChanged += new System.EventHandler(this.textBox_stdId_TextChanged);
+            this.txtCourseName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtCourseName.Location = new System.Drawing.Point(683, 24);
+            this.txtCourseName.Name = "txtCourseName";
+            this.txtCourseName.ReadOnly = true;
+            this.txtCourseName.Size = new System.Drawing.Size(250, 27);
+            this.txtCourseName.TabIndex = 44;
             // 
             // label5
             // 
@@ -226,101 +122,196 @@ namespace Transparent_Form
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label5.Location = new System.Drawing.Point(300, 98);
+            this.label5.Location = new System.Drawing.Point(611, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 23);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Comment :";
+            this.label5.Size = new System.Drawing.Size(66, 19);
+            this.label5.TabIndex = 43;
+            this.label5.Text = "Course:";
             // 
-            // label1
+            // txtStudentName
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label1.Location = new System.Drawing.Point(33, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 23);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Student Id :";
+            this.txtStudentName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtStudentName.Location = new System.Drawing.Point(364, 24);
+            this.txtStudentName.Name = "txtStudentName";
+            this.txtStudentName.ReadOnly = true;
+            this.txtStudentName.Size = new System.Drawing.Size(221, 27);
+            this.txtStudentName.TabIndex = 42;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label4.Location = new System.Drawing.Point(235, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 19);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "Student Name:";
+            // 
+            // txtComment
+            // 
+            this.txtComment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtComment.Location = new System.Drawing.Point(364, 76);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Size = new System.Drawing.Size(569, 71);
+            this.txtComment.TabIndex = 40;
+            // 
+            // txtScore
+            // 
+            this.txtScore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtScore.Location = new System.Drawing.Point(118, 76);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Size = new System.Drawing.Size(88, 27);
+            this.txtScore.TabIndex = 39;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label6.Location = new System.Drawing.Point(23, 80);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 19);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Score:";
+            // 
+            // txtId
+            // 
+            this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtId.Location = new System.Drawing.Point(118, 24);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(88, 27);
+            this.txtId.TabIndex = 37;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label7.Location = new System.Drawing.Point(235, 80);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 19);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Comment:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label3.Location = new System.Drawing.Point(23, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 19);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Student Id:";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(934, 10);
+            this.panel3.Size = new System.Drawing.Size(950, 10);
             this.panel3.TabIndex = 32;
             // 
-            // button_clear
+            // btnClear
             // 
-            this.button_clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_clear.BackColor = System.Drawing.Color.LimeGreen;
-            this.button_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_clear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_clear.ForeColor = System.Drawing.Color.White;
-            this.button_clear.Location = new System.Drawing.Point(680, 188);
-            this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(118, 39);
-            this.button_clear.TabIndex = 28;
-            this.button_clear.Text = "Clear";
-            this.button_clear.UseVisualStyleBackColor = false;
-            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClear.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(691, 183);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(118, 40);
+            this.btnClear.TabIndex = 28;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // button_update
+            // btnUpdate
             // 
-            this.button_update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_update.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_update.ForeColor = System.Drawing.Color.White;
-            this.button_update.Location = new System.Drawing.Point(804, 188);
-            this.button_update.Name = "button_update";
-            this.button_update.Size = new System.Drawing.Size(118, 39);
-            this.button_update.TabIndex = 28;
-            this.button_update.Text = "Update";
-            this.button_update.UseVisualStyleBackColor = false;
-            this.button_update.Click += new System.EventHandler(this.button_update_Click);
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(815, 183);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(118, 40);
+            this.btnUpdate.TabIndex = 28;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // button_search
+            // panel4
             // 
-            this.button_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_search.BackColor = System.Drawing.Color.LimeGreen;
-            this.button_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_search.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_search.ForeColor = System.Drawing.Color.White;
-            this.button_search.Location = new System.Drawing.Point(804, 50);
-            this.button_search.Name = "button_search";
-            this.button_search.Size = new System.Drawing.Size(118, 39);
-            this.button_search.TabIndex = 40;
-            this.button_search.Text = "Search";
-            this.button_search.UseVisualStyleBackColor = false;
-            this.button_search.Click += new System.EventHandler(this.button_search_Click);
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 375);
+            this.panel4.TabIndex = 42;
             // 
-            // DataGridView_score
+            // panel6
             // 
-            this.DataGridView_score.AllowUserToAddRows = false;
-            this.DataGridView_score.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DataGridView_score.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridView_score.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGridView_score.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridView_score.BackgroundColor = System.Drawing.Color.White;
-            this.DataGridView_score.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridView_score.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView_score.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridView_score.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView_score.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(940, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 375);
+            this.panel6.TabIndex = 43;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtSearch);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.dtgvScore);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(10, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(930, 375);
+            this.panel1.TabIndex = 44;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label1.Location = new System.Drawing.Point(0, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 25);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Manage Score";
+            // 
+            // dtgvScore
+            // 
+            this.dtgvScore.AllowUserToAddRows = false;
+            this.dtgvScore.AllowUserToDeleteRows = false;
+            this.dtgvScore.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvScore.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvScore.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvScore.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dtgvScore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvScore.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sId,
             this.sFname,
             this.sLname,
@@ -328,44 +319,48 @@ namespace Transparent_Form
             this.cName,
             this.scr,
             this.scrDesc});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView_score.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DataGridView_score.EnableHeadersVisualStyles = false;
-            this.DataGridView_score.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.DataGridView_score.Location = new System.Drawing.Point(13, 93);
-            this.DataGridView_score.Name = "DataGridView_score";
-            this.DataGridView_score.ReadOnly = true;
-            this.DataGridView_score.RowHeadersVisible = false;
-            this.DataGridView_score.RowHeadersWidth = 20;
-            this.DataGridView_score.RowTemplate.Height = 80;
-            this.DataGridView_score.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView_score.Size = new System.Drawing.Size(909, 281);
-            this.DataGridView_score.TabIndex = 41;
-            this.DataGridView_score.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_score_Click);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvScore.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dtgvScore.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtgvScore.EnableHeadersVisualStyles = false;
+            this.dtgvScore.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            this.dtgvScore.Location = new System.Drawing.Point(0, 97);
+            this.dtgvScore.Name = "dtgvScore";
+            this.dtgvScore.ReadOnly = true;
+            this.dtgvScore.RowHeadersVisible = false;
+            this.dtgvScore.RowHeadersWidth = 20;
+            this.dtgvScore.RowTemplate.Height = 80;
+            this.dtgvScore.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvScore.Size = new System.Drawing.Size(930, 278);
+            this.dtgvScore.TabIndex = 46;
+            this.dtgvScore.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvScore_CellClick);
             // 
-            // panel4
+            // txtSearch
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 46);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 332);
-            this.panel4.TabIndex = 42;
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Location = new System.Drawing.Point(598, 42);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(325, 27);
+            this.txtSearch.TabIndex = 49;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // panel6
+            // label2
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(924, 46);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 332);
-            this.panel6.TabIndex = 43;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label2.Location = new System.Drawing.Point(531, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 19);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Search:";
             // 
             // sId
             // 
@@ -374,6 +369,7 @@ namespace Transparent_Form
             this.sId.MinimumWidth = 6;
             this.sId.Name = "sId";
             this.sId.ReadOnly = true;
+            this.sId.Width = 120;
             // 
             // sFname
             // 
@@ -382,6 +378,7 @@ namespace Transparent_Form
             this.sFname.MinimumWidth = 6;
             this.sFname.Name = "sFname";
             this.sFname.ReadOnly = true;
+            this.sFname.Width = 120;
             // 
             // sLname
             // 
@@ -390,6 +387,7 @@ namespace Transparent_Form
             this.sLname.MinimumWidth = 6;
             this.sLname.Name = "sLname";
             this.sLname.ReadOnly = true;
+            this.sLname.Width = 120;
             // 
             // cId
             // 
@@ -398,6 +396,7 @@ namespace Transparent_Form
             this.cId.MinimumWidth = 6;
             this.cId.Name = "cId";
             this.cId.ReadOnly = true;
+            this.cId.Width = 120;
             // 
             // cName
             // 
@@ -406,6 +405,7 @@ namespace Transparent_Form
             this.cName.MinimumWidth = 6;
             this.cName.Name = "cName";
             this.cName.ReadOnly = true;
+            this.cName.Width = 150;
             // 
             // scr
             // 
@@ -422,60 +422,57 @@ namespace Transparent_Form
             this.scrDesc.MinimumWidth = 6;
             this.scrDesc.Name = "scrDesc";
             this.scrDesc.ReadOnly = true;
+            this.scrDesc.Width = 200;
             // 
             // ManageScoreForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(934, 613);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(950, 610);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.DataGridView_score);
-            this.Controls.Add(this.textBox_search);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button_search);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ManageScoreForm";
             this.Text = "ManageScoreForm";
             this.Load += new System.EventHandler(this.ManageScoreForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView_score)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvScore)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox_search;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button_clear;
-        private System.Windows.Forms.Button button_update;
-        private System.Windows.Forms.Button button_search;
-        private System.Windows.Forms.TextBox textBox_description;
-        private System.Windows.Forms.TextBox textBox_score;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox_stdId;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_courName;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.TextBox txtComment;
+        private System.Windows.Forms.TextBox txtScore;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_stdName;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCourseName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView DataGridView_score;
+        private System.Windows.Forms.TextBox txtStudentName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dtgvScore;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn sId;
         private System.Windows.Forms.DataGridViewTextBoxColumn sFname;
         private System.Windows.Forms.DataGridViewTextBoxColumn sLname;

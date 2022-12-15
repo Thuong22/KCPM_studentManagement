@@ -97,7 +97,6 @@ namespace Transparent_Form
                     {
                         Thread thread = new Thread(new ThreadStart(ShowAdminForm));
                         thread.Start();
-                        this.Close();
                     }
                     else if (account.type == 2)
                     {
@@ -114,8 +113,19 @@ namespace Transparent_Form
 
         private void ShowAdminForm()
         {
-            AdminForm.account = account;
-            new AdminForm().ShowDialog();
+            Thread t = new Thread(delegate () {
+                AdminForm.account = account;
+                new AdminForm().ShowDialog();
+                if (this.InvokeRequired)
+                {
+                    this.Invoke(new MethodInvoker(delegate
+                    {
+                        this.Close();
+                        new LoginForm().Show();
+                    }));
+                }
+            });
+            t.Start();
         }
 
         private void ShowStudentForm()
