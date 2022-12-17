@@ -23,6 +23,8 @@ namespace Transparent_Form
         }
         private void PrintCourseForm_Load(object sender, EventArgs e)
         {
+            this.ActiveControl = txtSearch;
+            dtgvCourse.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dtgvCourse.DataSource = course.GetCourseList("SELECT * FROM `course`");
         }
 

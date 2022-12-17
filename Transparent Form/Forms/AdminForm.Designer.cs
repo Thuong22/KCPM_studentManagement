@@ -35,17 +35,17 @@ namespace Transparent_Form
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlSubScore = new System.Windows.Forms.Panel();
             this.btnScorePrint = new System.Windows.Forms.Button();
-            this.btnManageScore = new System.Windows.Forms.Button();
+            this.btnManageScores = new System.Windows.Forms.Button();
             this.btnScore = new System.Windows.Forms.Button();
             this.pnlSubCourse = new System.Windows.Forms.Panel();
             this.btnCoursePrint = new System.Windows.Forms.Button();
-            this.btnManageCourse = new System.Windows.Forms.Button();
+            this.btnManageCourses = new System.Windows.Forms.Button();
             this.btnStudentInCourse = new System.Windows.Forms.Button();
             this.btnCourses = new System.Windows.Forms.Button();
             this.pnlSubStudent = new System.Windows.Forms.Panel();
             this.btnStudentPrint = new System.Windows.Forms.Button();
-            this.btnManageStudent = new System.Windows.Forms.Button();
-            this.btnStudent = new System.Windows.Forms.Button();
+            this.btnManageStudents = new System.Windows.Forms.Button();
+            this.btnStudents = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlCover = new System.Windows.Forms.Panel();
@@ -100,7 +100,7 @@ namespace Transparent_Form
             this.pnlNavigation.Controls.Add(this.pnlSubCourse);
             this.pnlNavigation.Controls.Add(this.btnCourses);
             this.pnlNavigation.Controls.Add(this.pnlSubStudent);
-            this.pnlNavigation.Controls.Add(this.btnStudent);
+            this.pnlNavigation.Controls.Add(this.btnStudents);
             this.pnlNavigation.Controls.Add(this.btnDashboard);
             this.pnlNavigation.Controls.Add(this.pnlLogo);
             this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
@@ -134,7 +134,7 @@ namespace Transparent_Form
             // 
             this.pnlSubScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(200)))));
             this.pnlSubScore.Controls.Add(this.btnScorePrint);
-            this.pnlSubScore.Controls.Add(this.btnManageScore);
+            this.pnlSubScore.Controls.Add(this.btnManageScores);
             this.pnlSubScore.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubScore.Location = new System.Drawing.Point(0, 562);
             this.pnlSubScore.Name = "pnlSubScore";
@@ -160,24 +160,24 @@ namespace Transparent_Form
             this.btnScorePrint.UseVisualStyleBackColor = false;
             this.btnScorePrint.Click += new System.EventHandler(this.btnScorePrint_Click);
             // 
-            // btnManageScore
+            // btnManageScores
             // 
-            this.btnManageScore.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnManageScore.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnManageScore.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageScore.FlatAppearance.BorderSize = 0;
-            this.btnManageScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageScore.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnManageScore.Location = new System.Drawing.Point(0, 0);
-            this.btnManageScore.Name = "btnManageScore";
-            this.btnManageScore.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnManageScore.Size = new System.Drawing.Size(183, 50);
-            this.btnManageScore.TabIndex = 1;
-            this.btnManageScore.Text = "Manage Score";
-            this.btnManageScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageScore.UseVisualStyleBackColor = false;
-            this.btnManageScore.Click += new System.EventHandler(this.btnManageScore_Click);
+            this.btnManageScores.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnManageScores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManageScores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageScores.FlatAppearance.BorderSize = 0;
+            this.btnManageScores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageScores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageScores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnManageScores.Location = new System.Drawing.Point(0, 0);
+            this.btnManageScores.Name = "btnManageScores";
+            this.btnManageScores.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnManageScores.Size = new System.Drawing.Size(183, 50);
+            this.btnManageScores.TabIndex = 1;
+            this.btnManageScores.Text = "Manage Scores";
+            this.btnManageScores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageScores.UseVisualStyleBackColor = false;
+            this.btnManageScores.Click += new System.EventHandler(this.btnManageScore_Click);
             // 
             // btnScore
             // 
@@ -194,7 +194,7 @@ namespace Transparent_Form
             this.btnScore.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnScore.Size = new System.Drawing.Size(183, 55);
             this.btnScore.TabIndex = 16;
-            this.btnScore.Text = "Score";
+            this.btnScore.Text = "Scores";
             this.btnScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnScore.UseVisualStyleBackColor = false;
             this.btnScore.Click += new System.EventHandler(this.btnScore_Click);
@@ -203,7 +203,7 @@ namespace Transparent_Form
             // 
             this.pnlSubCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(200)))));
             this.pnlSubCourse.Controls.Add(this.btnCoursePrint);
-            this.pnlSubCourse.Controls.Add(this.btnManageCourse);
+            this.pnlSubCourse.Controls.Add(this.btnManageCourses);
             this.pnlSubCourse.Controls.Add(this.btnStudentInCourse);
             this.pnlSubCourse.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubCourse.Location = new System.Drawing.Point(0, 357);
@@ -230,24 +230,24 @@ namespace Transparent_Form
             this.btnCoursePrint.UseVisualStyleBackColor = false;
             this.btnCoursePrint.Click += new System.EventHandler(this.btnCoursePrint_Click);
             // 
-            // btnManageCourse
+            // btnManageCourses
             // 
-            this.btnManageCourse.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnManageCourse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnManageCourse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageCourse.FlatAppearance.BorderSize = 0;
-            this.btnManageCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageCourse.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnManageCourse.Location = new System.Drawing.Point(0, 50);
-            this.btnManageCourse.Name = "btnManageCourse";
-            this.btnManageCourse.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnManageCourse.Size = new System.Drawing.Size(183, 50);
-            this.btnManageCourse.TabIndex = 1;
-            this.btnManageCourse.Text = "Manage Course";
-            this.btnManageCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageCourse.UseVisualStyleBackColor = false;
-            this.btnManageCourse.Click += new System.EventHandler(this.btnManageCourse_Click);
+            this.btnManageCourses.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnManageCourses.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManageCourses.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageCourses.FlatAppearance.BorderSize = 0;
+            this.btnManageCourses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageCourses.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCourses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnManageCourses.Location = new System.Drawing.Point(0, 50);
+            this.btnManageCourses.Name = "btnManageCourses";
+            this.btnManageCourses.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnManageCourses.Size = new System.Drawing.Size(183, 50);
+            this.btnManageCourses.TabIndex = 1;
+            this.btnManageCourses.Text = "Manage Courses";
+            this.btnManageCourses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageCourses.UseVisualStyleBackColor = false;
+            this.btnManageCourses.Click += new System.EventHandler(this.btnManageCourse_Click);
             // 
             // btnStudentInCourse
             // 
@@ -292,7 +292,7 @@ namespace Transparent_Form
             // 
             this.pnlSubStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(200)))));
             this.pnlSubStudent.Controls.Add(this.btnStudentPrint);
-            this.pnlSubStudent.Controls.Add(this.btnManageStudent);
+            this.pnlSubStudent.Controls.Add(this.btnManageStudents);
             this.pnlSubStudent.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubStudent.Location = new System.Drawing.Point(0, 202);
             this.pnlSubStudent.Name = "pnlSubStudent";
@@ -318,44 +318,44 @@ namespace Transparent_Form
             this.btnStudentPrint.UseVisualStyleBackColor = false;
             this.btnStudentPrint.Click += new System.EventHandler(this.btnStudentPrint_Click);
             // 
-            // btnManageStudent
+            // btnManageStudents
             // 
-            this.btnManageStudent.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnManageStudent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnManageStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageStudent.FlatAppearance.BorderSize = 0;
-            this.btnManageStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageStudent.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnManageStudent.Location = new System.Drawing.Point(0, 0);
-            this.btnManageStudent.Name = "btnManageStudent";
-            this.btnManageStudent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnManageStudent.Size = new System.Drawing.Size(183, 50);
-            this.btnManageStudent.TabIndex = 1;
-            this.btnManageStudent.Text = "Manage Student";
-            this.btnManageStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageStudent.UseVisualStyleBackColor = false;
-            this.btnManageStudent.Click += new System.EventHandler(this.btnManageStudent_Click);
+            this.btnManageStudents.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnManageStudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManageStudents.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageStudents.FlatAppearance.BorderSize = 0;
+            this.btnManageStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageStudents.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageStudents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnManageStudents.Location = new System.Drawing.Point(0, 0);
+            this.btnManageStudents.Name = "btnManageStudents";
+            this.btnManageStudents.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnManageStudents.Size = new System.Drawing.Size(183, 50);
+            this.btnManageStudents.TabIndex = 1;
+            this.btnManageStudents.Text = "Manage Students";
+            this.btnManageStudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageStudents.UseVisualStyleBackColor = false;
+            this.btnManageStudents.Click += new System.EventHandler(this.btnManageStudent_Click);
             // 
-            // btnStudent
+            // btnStudents
             // 
-            this.btnStudent.BackColor = System.Drawing.Color.White;
-            this.btnStudent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStudent.FlatAppearance.BorderSize = 0;
-            this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudent.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnStudent.Location = new System.Drawing.Point(0, 147);
-            this.btnStudent.Margin = new System.Windows.Forms.Padding(5);
-            this.btnStudent.Name = "btnStudent";
-            this.btnStudent.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnStudent.Size = new System.Drawing.Size(183, 55);
-            this.btnStudent.TabIndex = 12;
-            this.btnStudent.Text = "Student";
-            this.btnStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStudent.UseVisualStyleBackColor = false;
-            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
+            this.btnStudents.BackColor = System.Drawing.Color.White;
+            this.btnStudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStudents.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStudents.FlatAppearance.BorderSize = 0;
+            this.btnStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudents.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnStudents.Location = new System.Drawing.Point(0, 147);
+            this.btnStudents.Margin = new System.Windows.Forms.Padding(5);
+            this.btnStudents.Name = "btnStudents";
+            this.btnStudents.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnStudents.Size = new System.Drawing.Size(183, 55);
+            this.btnStudents.TabIndex = 12;
+            this.btnStudents.Text = "Students";
+            this.btnStudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStudents.UseVisualStyleBackColor = false;
+            this.btnStudents.Click += new System.EventHandler(this.btnStudent_Click);
             // 
             // btnDashboard
             // 
@@ -667,17 +667,17 @@ namespace Transparent_Form
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel pnlSubScore;
         private System.Windows.Forms.Button btnScorePrint;
-        private System.Windows.Forms.Button btnManageScore;
+        private System.Windows.Forms.Button btnManageScores;
         private System.Windows.Forms.Button btnScore;
         private System.Windows.Forms.Panel pnlSubCourse;
         private System.Windows.Forms.Button btnCoursePrint;
-        private System.Windows.Forms.Button btnManageCourse;
+        private System.Windows.Forms.Button btnManageCourses;
         private System.Windows.Forms.Button btnStudentInCourse;
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Panel pnlSubStudent;
         private System.Windows.Forms.Button btnStudentPrint;
-        private System.Windows.Forms.Button btnManageStudent;
-        private System.Windows.Forms.Button btnStudent;
+        private System.Windows.Forms.Button btnManageStudents;
+        private System.Windows.Forms.Button btnStudents;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel pnlCover;

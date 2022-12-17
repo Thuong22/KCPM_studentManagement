@@ -24,6 +24,8 @@ namespace Transparent_Form
 
         private void PrintScoreForm_Load(object sender, EventArgs e)
         {
+            this.ActiveControl = txtSearch;
+            dtgvScore.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             LoadScore();
         }
 

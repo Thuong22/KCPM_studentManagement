@@ -140,7 +140,7 @@ namespace Transparent_Form
                     this.Invoke(new MethodInvoker(delegate
                     {
                         this.Close();
-                        //AdminForm.account = account;
+                        StudentForm.account = account;
                         new StudentForm().ShowDialog();
                         new LoginForm().Show();
                     }));

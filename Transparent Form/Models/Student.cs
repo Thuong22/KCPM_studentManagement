@@ -12,7 +12,7 @@ namespace Transparent_Form
     public class Student
     {
         DBconnect connect = new DBconnect();
-
+        public int id { get; set; }
         public DataTable GetStudentList(string query)
         {
             MySqlCommand command = new MySqlCommand(query, connect.GetConnection);
@@ -112,15 +112,6 @@ namespace Transparent_Form
                 return false;
             }
 
-        }
-        // create a function for any command in studentDb
-        public DataTable getList(MySqlCommand command)
-        {
-            command.Connection = connect.GetConnection;
-            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            return table;
         }
     }
 }

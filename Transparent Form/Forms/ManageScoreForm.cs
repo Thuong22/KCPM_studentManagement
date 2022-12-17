@@ -23,6 +23,7 @@ namespace Transparent_Form
         {
             btnUpdate.Enabled = false;
             this.ActiveControl = txtSearch;
+            dtgvScore.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             LoadScore();
             dtgvScore.ClearSelection();
         }

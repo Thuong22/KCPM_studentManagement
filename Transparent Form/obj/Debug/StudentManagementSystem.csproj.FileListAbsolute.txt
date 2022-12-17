@@ -154,3 +154,5 @@ C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Deb
 C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.PrintStudentForm.resources
 C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.StudentInCourseForm.resources
 C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.Forms.StudentForm.resources
+C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.Forms.MyCoursesForm.resources
+C:\Users\Lenovo\Documents\GitHub\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.Forms.AllCoursesForm.resources

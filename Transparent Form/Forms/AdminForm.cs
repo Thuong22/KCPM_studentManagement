@@ -55,11 +55,12 @@ namespace Transparent_Form
         #endregion
 
         Student student;
-        Course course = new Course();
+        Course course;
         bool isLogout = false;
         Form activeForm;
         Button curButton;
         public static Account account;
+
         public AdminForm()
         {
             InitializeComponent();
@@ -72,6 +73,7 @@ namespace Transparent_Form
             pnlSubCourse.Visible = false;
             pnlSubScore.Visible = false;
             student = new Student();
+            course = new Course();
             EnableButton(btnDashboard);
 
             lbTotalStudent.Text = student.GetNumberOfStudents();

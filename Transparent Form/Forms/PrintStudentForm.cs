@@ -35,6 +35,7 @@ namespace Transparent_Form
             cbbGender.SelectedIndex = -1;
             cbbGender.Text = "Gender";
             cbbGender.Font = new Font(cbbGender.Font, FontStyle.Italic);
+            dtgvStudent.AllowUserToResizeRows = false;
 
             LoadStudentList("SELECT * FROM `student`");
         }

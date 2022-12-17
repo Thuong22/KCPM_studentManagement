@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transparent_Form.Models;
 
 namespace Transparent_Form.Forms
 {
@@ -51,10 +52,111 @@ namespace Transparent_Form.Forms
             }
         }
         #endregion
+
+        Student student;
+        bool isLogout = false;
+        Form activeForm;
+        Button curButton;
+        public static Account account;
+
         public StudentForm()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 12, 12));
+        }
+
+        private void StudentForm_Load(object sender, EventArgs e)
+        {
+            student = new Student();
+            EnableButton(btnDashboard);
+
+            lbUsername.Text = account.username;
+            lbUsername.Location = new Point(pnlWelcome.Width - (lbUsername.Size.Width + 87), lbUsername.Location.Y);
+            lbWelcome.Location = new Point(pnlWelcome.Width - (lbWelcome.Size.Width + lbUsername.Size.Width + 81), lbWelcome.Location.Y);
+
+            //var data = student.GetStudentList("")
+
+            //student = student.GetStudentList
+
+            //lbName.Text = 
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlMain.Controls.Add(childForm);
+            pnlMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+       
+        private void EnableButton(object sender)
+        {
+            if (sender != null)
+            {
+                DisableButton();
+
+                curButton = (Button)sender;
+                curButton.ForeColor = Color.White;
+                curButton.BackColor = Color.FromArgb(56, 95, 197);
+            }
+        }
+
+        private void DisableButton()
+        {
+            if (curButton != null)
+            {
+                curButton.BackColor = Color.White;
+                curButton.ForeColor = Color.FromArgb(0, 71, 160);
+            }
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            EnableButton(sender as Button);
+            if (activeForm != null)
+                activeForm.Close();
+            pnlMain.Controls.Add(pnlCover);
+        }
+
+        private void btnMyCourses_Click(object sender, EventArgs e)
+        {
+            EnableButton(sender as Button);
+            OpenChildForm(new MyCoursesForm());
+        }
+
+        private void btnAllCourses_Click(object sender, EventArgs e)
+        {
+            EnableButton(sender as Button);
+            OpenChildForm(new AllCoursesForm());
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            isLogout = true;
+            this.Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void StudentForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!isLogout)
+                Application.Exit();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new EditProfile());
         }
     }
 }

@@ -29,8 +29,8 @@ namespace Transparent_Form
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -50,10 +50,10 @@ namespace Transparent_Form
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtgvScore = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtgvScore = new System.Windows.Forms.DataGridView();
             this.sId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sFname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sLname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -224,10 +224,11 @@ namespace Transparent_Form
             // btnClear
             // 
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClear.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnClear.BackColor = System.Drawing.Color.White;
+            this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
             this.btnClear.Location = new System.Drawing.Point(691, 183);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(118, 40);
@@ -282,65 +283,6 @@ namespace Transparent_Form
             this.panel1.Size = new System.Drawing.Size(930, 375);
             this.panel1.TabIndex = 44;
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label1.Location = new System.Drawing.Point(0, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 25);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "Manage Score";
-            // 
-            // dtgvScore
-            // 
-            this.dtgvScore.AllowUserToAddRows = false;
-            this.dtgvScore.AllowUserToDeleteRows = false;
-            this.dtgvScore.BackgroundColor = System.Drawing.Color.White;
-            this.dtgvScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgvScore.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvScore.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvScore.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dtgvScore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvScore.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sId,
-            this.sFname,
-            this.sLname,
-            this.cId,
-            this.cName,
-            this.scr,
-            this.scrDesc});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvScore.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dtgvScore.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgvScore.EnableHeadersVisualStyles = false;
-            this.dtgvScore.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.dtgvScore.Location = new System.Drawing.Point(0, 97);
-            this.dtgvScore.Name = "dtgvScore";
-            this.dtgvScore.ReadOnly = true;
-            this.dtgvScore.RowHeadersVisible = false;
-            this.dtgvScore.RowHeadersWidth = 20;
-            this.dtgvScore.RowTemplate.Height = 80;
-            this.dtgvScore.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvScore.Size = new System.Drawing.Size(930, 278);
-            this.dtgvScore.TabIndex = 46;
-            this.dtgvScore.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvScore_CellClick);
-            // 
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -361,6 +303,65 @@ namespace Transparent_Form
             this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 48;
             this.label2.Text = "Search:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label1.Location = new System.Drawing.Point(0, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 25);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Manage Scores";
+            // 
+            // dtgvScore
+            // 
+            this.dtgvScore.AllowUserToAddRows = false;
+            this.dtgvScore.AllowUserToDeleteRows = false;
+            this.dtgvScore.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvScore.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvScore.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvScore.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvScore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvScore.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sId,
+            this.sFname,
+            this.sLname,
+            this.cId,
+            this.cName,
+            this.scr,
+            this.scrDesc});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvScore.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvScore.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtgvScore.EnableHeadersVisualStyles = false;
+            this.dtgvScore.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            this.dtgvScore.Location = new System.Drawing.Point(0, 97);
+            this.dtgvScore.Name = "dtgvScore";
+            this.dtgvScore.ReadOnly = true;
+            this.dtgvScore.RowHeadersVisible = false;
+            this.dtgvScore.RowHeadersWidth = 20;
+            this.dtgvScore.RowTemplate.Height = 80;
+            this.dtgvScore.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvScore.Size = new System.Drawing.Size(930, 278);
+            this.dtgvScore.TabIndex = 46;
+            this.dtgvScore.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvScore_CellClick);
             // 
             // sId
             // 

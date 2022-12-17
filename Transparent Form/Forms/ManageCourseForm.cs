@@ -14,6 +14,7 @@ namespace Transparent_Form
     public partial class ManageCourseForm : Form
     {
         Course course = new Course();
+
         public ManageCourseForm()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Transparent_Form
         private void ManageCourseForm_Load(object sender, EventArgs e)
         {
             dtgvCourse.AutoGenerateColumns = false;
+            dtgvCourse.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
             btnClear.Enabled = false;
@@ -56,6 +58,7 @@ namespace Transparent_Form
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
             btnClear.Enabled = true;
+            this.ActiveControl = txtSearch;
             dtgvCourse.ClearSelection();
         }
 
