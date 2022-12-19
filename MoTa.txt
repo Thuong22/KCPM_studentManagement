@@ -1,0 +1,30 @@
+chú giải:
+
+phần mềm cung cấp khoá học onl: 
+khi tạo thông tin 1 học viên, 
+học viên đó sẽ được cấp 1 tài khoản tự động
+
+//những thay đổi
+
+- sửa db: 
+ + xoá student table, user table
+ + gộp chung lại thành account table
+
+CREATE TABLE `account` (
+  `AccId` int(5) NOT NULL,
+  `Username` varchar(20) NOT NULL DEFAULT 'student.xx',
+  `Password` varchar(20) NOT NULL DEFAULT '123456',
+  `Type` int(11) NOT NULL,
+  `AccFirstName` varchar(15) NOT NULL,
+  `AccLastName` varchar(15) NOT NULL,
+  `Birthdate` date NOT NULL,
+  `Gender` varchar(10) NOT NULL,
+  `Phone` varchar(15) NOT NULL,
+  `Address` text NOT NULL,
+  `Photo` longblob DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+//chức năng
+- đã sửa lại các ảnh hưởng của database vào app với quyền hạn admin
+- thêm chức năng quản lý tài khoản + tài khoản của tôi.
+
