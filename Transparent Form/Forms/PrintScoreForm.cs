@@ -25,9 +25,9 @@ namespace Transparent_Form
         private void button_search_Click(object sender, EventArgs e)
         {
             DataGridView_score.DataSource = score.getList(new MySqlCommand(
-                "SELECT score.StudentId, student.StdFirstName, student.StdLastName, course.CourseName, score.Score, score.Description " +
-                "FROM student INNER JOIN score INNER JOIN course ON score.StudentId = student.StdId AND score.CourseId = course.CourseId " +
-                "WHERE CONCAT(student.StdFirstName, student.StdLastName, course.CourseName)LIKE '%" + textBox_search.Text + "%'"));
+                "SELECT score.StudentId, account.AccFirstName, account.AccLastName, course.CourseName, score.Score, score.Description " +
+                "FROM account INNER JOIN score INNER JOIN course ON score.StudentId = account.AccId AND score.CourseId = course.CourseId " +
+                "WHERE CONCAT(account.AccFirstName, account.AccLastName, course.CourseName)LIKE '%" + textBox_search.Text + "%'"));
         }
 
         private void button_print_Click(object sender, EventArgs e)
@@ -53,8 +53,8 @@ namespace Transparent_Form
         public void showScore()
         {
             DataGridView_score.DataSource = score.getList(new MySqlCommand(
-                "SELECT score.StudentId,student.StdFirstName,student.StdLastName,course.CourseName,score.Score,score.Description " +
-                "FROM student INNER JOIN score INNER JOIN course ON score.StudentId=student.StdId AND score.CourseId=course.CourseId"));
+                "SELECT score.StudentId, account.AccFirstName, account.AccLastName, course.CourseName,score.Score,score.Description " +
+                "FROM account INNER JOIN score INNER JOIN course ON score.StudentId=account.AccId AND score.CourseId=course.CourseId"));
         }
     }
 }

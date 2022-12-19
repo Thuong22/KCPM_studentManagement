@@ -85,7 +85,7 @@ namespace Transparent_Form
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(10, 8);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(287, 38);
+            this.label7.Size = new System.Drawing.Size(190, 25);
             this.label7.TabIndex = 0;
             this.label7.Text = "Manage Students";
             // 
@@ -121,7 +121,7 @@ namespace Transparent_Form
             this.textBox_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_search.Location = new System.Drawing.Point(642, 55);
             this.textBox_search.Name = "textBox_search";
-            this.textBox_search.Size = new System.Drawing.Size(156, 37);
+            this.textBox_search.Size = new System.Drawing.Size(156, 27);
             this.textBox_search.TabIndex = 31;
             // 
             // label1
@@ -132,7 +132,7 @@ namespace Transparent_Form
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label1.Location = new System.Drawing.Point(21, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 28);
+            this.label1.Size = new System.Drawing.Size(97, 19);
             this.label1.TabIndex = 15;
             this.label1.Text = "First Name :";
             // 
@@ -144,7 +144,7 @@ namespace Transparent_Form
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label3.Location = new System.Drawing.Point(21, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 28);
+            this.label3.Size = new System.Drawing.Size(110, 19);
             this.label3.TabIndex = 17;
             this.label3.Text = "Date Of Birth :";
             // 
@@ -156,7 +156,7 @@ namespace Transparent_Form
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label5.Location = new System.Drawing.Point(21, 114);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 28);
+            this.label5.Size = new System.Drawing.Size(78, 19);
             this.label5.TabIndex = 16;
             this.label5.Text = "Address :";
             // 
@@ -165,7 +165,7 @@ namespace Transparent_Form
             this.textBox_Fname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_Fname.Location = new System.Drawing.Point(134, 24);
             this.textBox_Fname.Name = "textBox_Fname";
-            this.textBox_Fname.Size = new System.Drawing.Size(140, 37);
+            this.textBox_Fname.Size = new System.Drawing.Size(140, 27);
             this.textBox_Fname.TabIndex = 18;
             // 
             // label2
@@ -176,7 +176,7 @@ namespace Transparent_Form
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label2.Location = new System.Drawing.Point(515, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 28);
+            this.label2.Size = new System.Drawing.Size(76, 19);
             this.label2.TabIndex = 19;
             this.label2.Text = "Gender :";
             // 
@@ -188,7 +188,7 @@ namespace Transparent_Form
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label4.Location = new System.Drawing.Point(280, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 28);
+            this.label4.Size = new System.Drawing.Size(98, 19);
             this.label4.TabIndex = 20;
             this.label4.Text = "Last Name :";
             // 
@@ -197,7 +197,7 @@ namespace Transparent_Form
             this.textBox_Lname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_Lname.Location = new System.Drawing.Point(384, 24);
             this.textBox_Lname.Name = "textBox_Lname";
-            this.textBox_Lname.Size = new System.Drawing.Size(135, 37);
+            this.textBox_Lname.Size = new System.Drawing.Size(135, 27);
             this.textBox_Lname.TabIndex = 21;
             // 
             // dtpBirth
@@ -205,7 +205,7 @@ namespace Transparent_Form
             this.dtpBirth.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpBirth.Location = new System.Drawing.Point(134, 70);
             this.dtpBirth.Name = "dtpBirth";
-            this.dtpBirth.Size = new System.Drawing.Size(291, 37);
+            this.dtpBirth.Size = new System.Drawing.Size(291, 27);
             this.dtpBirth.TabIndex = 22;
             // 
             // radioButton_male
@@ -217,7 +217,7 @@ namespace Transparent_Form
             this.radioButton_male.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.radioButton_male.Location = new System.Drawing.Point(603, 72);
             this.radioButton_male.Name = "radioButton_male";
-            this.radioButton_male.Size = new System.Drawing.Size(96, 32);
+            this.radioButton_male.Size = new System.Drawing.Size(66, 23);
             this.radioButton_male.TabIndex = 23;
             this.radioButton_male.TabStop = true;
             this.radioButton_male.Text = "Male";
@@ -231,7 +231,7 @@ namespace Transparent_Form
             this.radioButton_female.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.radioButton_female.Location = new System.Drawing.Point(685, 72);
             this.radioButton_female.Name = "radioButton_female";
-            this.radioButton_female.Size = new System.Drawing.Size(123, 32);
+            this.radioButton_female.Size = new System.Drawing.Size(84, 23);
             this.radioButton_female.TabIndex = 24;
             this.radioButton_female.Text = "FeMale";
             this.radioButton_female.UseVisualStyleBackColor = true;
@@ -309,7 +309,7 @@ namespace Transparent_Form
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label6.Location = new System.Drawing.Point(528, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 28);
+            this.label6.Size = new System.Drawing.Size(66, 19);
             this.label6.TabIndex = 30;
             this.label6.Text = "Phone :";
             // 
@@ -318,7 +318,7 @@ namespace Transparent_Form
             this.textBox_phone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_phone.Location = new System.Drawing.Point(602, 24);
             this.textBox_phone.Name = "textBox_phone";
-            this.textBox_phone.Size = new System.Drawing.Size(168, 37);
+            this.textBox_phone.Size = new System.Drawing.Size(168, 27);
             this.textBox_phone.TabIndex = 31;
             // 
             // label8
@@ -329,7 +329,7 @@ namespace Transparent_Form
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label8.Location = new System.Drawing.Point(598, 114);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 28);
+            this.label8.Size = new System.Drawing.Size(58, 19);
             this.label8.TabIndex = 30;
             this.label8.Text = "Id No :";
             // 
@@ -340,7 +340,7 @@ namespace Transparent_Form
             this.textBox_id.Location = new System.Drawing.Point(670, 111);
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.ReadOnly = true;
-            this.textBox_id.Size = new System.Drawing.Size(100, 37);
+            this.textBox_id.Size = new System.Drawing.Size(100, 27);
             this.textBox_id.TabIndex = 31;
             this.textBox_id.TextChanged += new System.EventHandler(this.textBox_id_TextChanged);
             // 
@@ -487,7 +487,7 @@ namespace Transparent_Form
             // 
             // sId
             // 
-            this.sId.DataPropertyName = "StdId";
+            this.sId.DataPropertyName = "AccId";
             this.sId.HeaderText = "ID";
             this.sId.MinimumWidth = 6;
             this.sId.Name = "sId";
@@ -495,7 +495,7 @@ namespace Transparent_Form
             // 
             // sFname
             // 
-            this.sFname.DataPropertyName = "StdFirstName";
+            this.sFname.DataPropertyName = "AccFirstName";
             this.sFname.HeaderText = "First Name";
             this.sFname.MinimumWidth = 6;
             this.sFname.Name = "sFname";
@@ -503,7 +503,7 @@ namespace Transparent_Form
             // 
             // sLname
             // 
-            this.sLname.DataPropertyName = "StdLastName";
+            this.sLname.DataPropertyName = "AccLastName";
             this.sLname.HeaderText = "Last Name";
             this.sLname.MinimumWidth = 6;
             this.sLname.Name = "sLname";
@@ -569,7 +569,7 @@ namespace Transparent_Form
             // 
             // ManageStudentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(934, 613);
@@ -625,6 +625,10 @@ namespace Transparent_Form
         private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView DataGridView_student;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridViewTextBoxColumn sId;
         private System.Windows.Forms.DataGridViewTextBoxColumn sFname;
         private System.Windows.Forms.DataGridViewTextBoxColumn sLname;
@@ -633,9 +637,5 @@ namespace Transparent_Form
         private System.Windows.Forms.DataGridViewTextBoxColumn sPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn sAddress;
         private System.Windows.Forms.DataGridViewImageColumn sPhoto;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
     }
 }

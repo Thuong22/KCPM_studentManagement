@@ -14,7 +14,7 @@ namespace Transparent_Form
 {
     public partial class ManageStudentForm : Form
     {
-        StudentClass student = new StudentClass();
+        AccountClass student = new AccountClass();
         public ManageStudentForm()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace Transparent_Form
 
         public void showTable()
         {
-            DataGridView_student.DataSource = student.getStudentlist(new MySqlCommand("SELECT * FROM `student`"));
+            DataGridView_student.DataSource = student.getList(new MySqlCommand("SELECT AccId, AccFirstName, AccLastName, Birthdate, Gender, Phone, Address, Photo FROM `account` WHERE Type = 2"));
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
             imageColumn = (DataGridViewImageColumn)DataGridView_student.Columns[7];
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
@@ -46,6 +46,8 @@ namespace Transparent_Form
             textBox_id.Text = DataGridView_student.CurrentRow.Cells[0].Value.ToString();
             textBox_Fname.Text = DataGridView_student.CurrentRow.Cells[1].Value.ToString();
             textBox_Lname.Text = DataGridView_student.CurrentRow.Cells[2].Value.ToString();
+            //object date = DataGridView_student.CurrentRow.Cells[3].Value;
+            //dtpBirth.Value = (DateTime)date;
 
             dtpBirth.Value = (DateTime)DataGridView_student.CurrentRow.Cells[3].Value;
             if (DataGridView_student.CurrentRow.Cells[4].Value.ToString() == "Male")
@@ -81,6 +83,7 @@ namespace Transparent_Form
             button_add.Enabled = true;
             button_delete.Enabled = false;
             button_update.Enabled = false;
+            
         }
 
         private void button_upload_Click(object sender, EventArgs e)
@@ -157,7 +160,7 @@ namespace Transparent_Form
                     if (student.insertStudent(fname, lname, bdate, gender, phone, address, img))
                     {
                         showTable();
-                        MessageBox.Show("Add new student successfully!", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Add new student successfully!" + $" \n New Student Account: \n Username: {student.username} \n Password: {student.password}","Add Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         button_clear.PerformClick();
                     }
                 }
@@ -231,7 +234,7 @@ namespace Transparent_Form
             int id = Convert.ToInt32(textBox_id.Text);
             if (MessageBox.Show("Are you sure you want to remove this student", "Remove Student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (student.deleteStudent(id))
+                if (student.deleteAccount(id))
                 {
                     showTable();
                     MessageBox.Show("Remove student successfully!", "Remove student", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -255,5 +258,6 @@ namespace Transparent_Form
                 button_delete.Enabled = true;
             }
         }
+               
     }
 }

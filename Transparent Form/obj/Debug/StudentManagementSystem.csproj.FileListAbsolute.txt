@@ -101,3 +101,58 @@ D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transpar
 D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\StudentManagementSystem.csproj.CopyComplete
 D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent Form.exe
 D:\KCPM\Project\StudentManagement_v2\Sửa UI\Student Management System\Transparent Form\obj\Debug\Transparent Form.pdb
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\NUnit3.TestAdapter.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\NUnit3.TestAdapter.pdb
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\nunit.engine.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\nunit.engine.api.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\nunit.engine.core.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\testcentric.engine.metadata.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\Transparent Form.exe.config
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\Transparent Form.exe
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\Transparent Form.pdb
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\BouncyCastle.Crypto.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\Google.Protobuf.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\Guna.UI2.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\K4os.Compression.LZ4.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\K4os.Hash.xxHash.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\MySql.Data.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\nunit.framework.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\System.Buffers.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\System.Memory.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\System.Numerics.Vectors.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\ZstdNet.dll
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\BouncyCastle.Crypto.xml
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\Google.Protobuf.pdb
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\Google.Protobuf.xml
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\K4os.Compression.LZ4.xml
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\K4os.Hash.xxHash.xml
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\MySql.Data.xml
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\nunit.framework.xml
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\System.Buffers.xml
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\System.Memory.xml
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\System.Numerics.Vectors.xml
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\StudentManagementSystem.csproj.AssemblyReference.cache
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\StudentManagementSystem.csproj.SuggestedBindingRedirects.cache
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.CourseForm.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.LoginForm.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.ManageCourseForm.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.ManageScoreForm.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.ManageStudentForm.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.PrintCourseForm.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.PrintScoreForm.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.PrintStudent.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.Properties.Resources.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.SplashForm.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\StudentManagementSystem.csproj.GenerateResource.cache
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\StudentManagementSystem.csproj.CoreCompileInputs.cache
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\StudentManagementSystem.csproj.CopyComplete
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent Form.exe
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent Form.pdb
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.ManageAccountForm.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.MainFormStudent.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.MainFormAdmin.resources
+D:\Github\KCPM\KCPM_studentManagement\Transparent Form\obj\Debug\Transparent_Form.MyAccountForm.resources

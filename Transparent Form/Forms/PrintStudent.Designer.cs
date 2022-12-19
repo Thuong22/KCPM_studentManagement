@@ -29,9 +29,9 @@ namespace Transparent_Form
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button_print = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,6 +39,8 @@ namespace Transparent_Form
             this.comboBox_gender = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.DataGridView_student = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.sId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sFname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sLname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,8 +49,6 @@ namespace Transparent_Form
             this.sPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sPhoto = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_student)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +75,7 @@ namespace Transparent_Form
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(10, 8);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(262, 38);
+            this.label7.Size = new System.Drawing.Size(172, 25);
             this.label7.TabIndex = 0;
             this.label7.Text = "Print Student List";
             // 
@@ -112,7 +112,7 @@ namespace Transparent_Form
             this.comboBox_gender.FormattingEnabled = true;
             this.comboBox_gender.Location = new System.Drawing.Point(618, 55);
             this.comboBox_gender.Name = "comboBox_gender";
-            this.comboBox_gender.Size = new System.Drawing.Size(180, 38);
+            this.comboBox_gender.Size = new System.Drawing.Size(180, 29);
             this.comboBox_gender.TabIndex = 31;
             // 
             // label3
@@ -123,7 +123,7 @@ namespace Transparent_Form
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label3.Location = new System.Drawing.Point(498, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 28);
+            this.label3.Size = new System.Drawing.Size(76, 19);
             this.label3.TabIndex = 30;
             this.label3.Text = "Gender :";
             // 
@@ -131,8 +131,8 @@ namespace Transparent_Form
             // 
             this.DataGridView_student.AllowUserToAddRows = false;
             this.DataGridView_student.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.DataGridView_student.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.DataGridView_student.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridView_student.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -140,14 +140,14 @@ namespace Transparent_Form
             this.DataGridView_student.BackgroundColor = System.Drawing.Color.White;
             this.DataGridView_student.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridView_student.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView_student.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView_student.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridView_student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView_student.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sId,
@@ -158,14 +158,14 @@ namespace Transparent_Form
             this.sPhone,
             this.sAddress,
             this.sPhoto});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView_student.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridView_student.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView_student.EnableHeadersVisualStyles = false;
             this.DataGridView_student.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
             this.DataGridView_student.Location = new System.Drawing.Point(13, 95);
@@ -178,9 +178,27 @@ namespace Transparent_Form
             this.DataGridView_student.Size = new System.Drawing.Size(909, 460);
             this.DataGridView_student.TabIndex = 35;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 46);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 567);
+            this.panel4.TabIndex = 36;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(924, 46);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(10, 567);
+            this.panel5.TabIndex = 38;
+            // 
             // sId
             // 
-            this.sId.DataPropertyName = "StdId";
+            this.sId.DataPropertyName = "AccId";
             this.sId.HeaderText = "ID";
             this.sId.MinimumWidth = 6;
             this.sId.Name = "sId";
@@ -188,7 +206,7 @@ namespace Transparent_Form
             // 
             // sFname
             // 
-            this.sFname.DataPropertyName = "StdFirstName";
+            this.sFname.DataPropertyName = "AccFirstName";
             this.sFname.HeaderText = "First Name";
             this.sFname.MinimumWidth = 6;
             this.sFname.Name = "sFname";
@@ -196,7 +214,7 @@ namespace Transparent_Form
             // 
             // sLname
             // 
-            this.sLname.DataPropertyName = "StdLastName";
+            this.sLname.DataPropertyName = "AccLastName";
             this.sLname.HeaderText = "Last Name";
             this.sLname.MinimumWidth = 6;
             this.sLname.Name = "sLname";
@@ -242,27 +260,9 @@ namespace Transparent_Form
             this.sPhoto.Name = "sPhoto";
             this.sPhoto.ReadOnly = true;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 46);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 567);
-            this.panel4.TabIndex = 36;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(924, 46);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 567);
-            this.panel5.TabIndex = 38;
-            // 
             // PrintStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(934, 613);
@@ -295,6 +295,8 @@ namespace Transparent_Form
         private System.Windows.Forms.ComboBox comboBox_gender;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView DataGridView_student;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridViewTextBoxColumn sId;
         private System.Windows.Forms.DataGridViewTextBoxColumn sFname;
         private System.Windows.Forms.DataGridViewTextBoxColumn sLname;
@@ -303,7 +305,5 @@ namespace Transparent_Form
         private System.Windows.Forms.DataGridViewTextBoxColumn sPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn sAddress;
         private System.Windows.Forms.DataGridViewImageColumn sPhoto;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
     }
 }

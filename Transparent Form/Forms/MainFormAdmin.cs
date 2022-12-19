@@ -11,19 +11,29 @@ using System.Windows.Forms;
 
 namespace Transparent_Form
 {
-    public partial class MainForm : Form
+    public partial class MainFormAdmin : Form
     {
-        StudentClass student = new StudentClass();
+        AccountClass student = new AccountClass();
         CourseClass course = new CourseClass();
         bool isLogout = false;
-        public MainForm()
+        public MainFormAdmin()
         {
             InitializeComponent();
             customizeDesign();
         }
 
+        private void customizeDesign()
+        {
+            panel_accountSubmenu.Visible = false;
+            panel_stdsubmenu.Visible = false;
+            panel_courseSubmenu.Visible = false;
+            panel_scoreSubmenu.Visible = false;
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
+            label_user.Text = AccountClass.account.username;
+
             studentCount();
             comboBox_course.DataSource = course.getCourse(new MySqlCommand("SELECT * FROM `course`"));
             comboBox_course.DisplayMember = "CourseName";
@@ -39,16 +49,10 @@ namespace Transparent_Form
 
         }
 
-
-        private void customizeDesign()
-        {
-            panel_stdsubmenu.Visible = false;
-            panel_courseSubmenu.Visible = false;
-            panel_scoreSubmenu.Visible = false;
-        }
-
         private void hideSubmenu()
         {
+            if (panel_accountSubmenu.Visible == true)
+                panel_accountSubmenu.Visible = false;
             if (panel_stdsubmenu.Visible == true)
                 panel_stdsubmenu.Visible = false;
             if (panel_courseSubmenu.Visible == true)
@@ -67,6 +71,25 @@ namespace Transparent_Form
             else
                 submenu.Visible = false;
         }
+
+        private void button_account_Click(object sender, EventArgs e)
+        {
+            showSubmenu(panel_accountSubmenu);
+        }
+        #region AccountSubmenu
+        private void button_manageAccount_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ManageAccountForm());
+            hideSubmenu();
+        }
+
+        private void button_myAccount_Click(object sender, EventArgs e)
+        {
+            openChildForm(new MyAccountForm());
+            hideSubmenu();
+        }
+
+        #endregion AccountSubmenu
 
         private void button_std_Click(object sender, EventArgs e)
         {
@@ -157,6 +180,7 @@ namespace Transparent_Form
                 activeForm.Close();
             panel_main.Controls.Add(panel_cover);
             studentCount();
+            label_user.Text = AccountClass.account.username;
         }
 
         private void button_exit_Click(object sender, EventArgs e)
@@ -168,8 +192,8 @@ namespace Transparent_Form
         private void comboBox_course_SelectedIndexChanged(object sender, EventArgs e)
         {
             string txt = comboBox_course.GetItemText(comboBox_course.SelectedItem);
-            label_cmale.Text = "Male : " + student.exeCount("SELECT COUNT(*) FROM student INNER JOIN score INNER JOIN course ON student.StdId=score.StudentId AND score.CourseId=course.CourseId WHERE course.CourseName='" + comboBox_course.GetItemText(comboBox_course.SelectedItem) +"' AND `Gender`= 'Male'");
-            label_cfemale.Text = "Female : " + student.exeCount("SELECT COUNT(*) FROM student INNER JOIN score INNER JOIN course ON student.StdId=score.StudentId AND score.CourseId=course.CourseId WHERE course.CourseName='" + comboBox_course.GetItemText(comboBox_course.SelectedItem) + "' AND `Gender`= 'Female'");
+            label_cmale.Text = "Male : " + student.getOneValueFromTable("SELECT COUNT(*) FROM account INNER JOIN score INNER JOIN course ON account.AccId=score.StudentId AND score.CourseId=course.CourseId WHERE course.CourseName='" + comboBox_course.GetItemText(comboBox_course.SelectedItem) +"' AND `Gender`= 'Male'");
+            label_cfemale.Text = "Female : " + student.getOneValueFromTable("SELECT COUNT(*) FROM account INNER JOIN score INNER JOIN course ON account.AccId=score.StudentId AND score.CourseId=course.CourseId WHERE course.CourseName='" + comboBox_course.GetItemText(comboBox_course.SelectedItem) + "' AND `Gender`= 'Female'");
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -177,5 +201,6 @@ namespace Transparent_Form
             if (!isLogout)
                 Application.Exit();
         }
+
     }
 }

@@ -14,7 +14,7 @@ namespace Transparent_Form
 {
     public partial class CourseForm : Form
     {
-        StudentClass student = new StudentClass();
+        AccountClass student = new AccountClass();
         CourseClass course = new CourseClass();
         ScoreClass score = new ScoreClass();
         public CourseForm()
@@ -29,9 +29,9 @@ namespace Transparent_Form
             comboBox_course.ValueMember = "CourseId";
             comboBox_course.SelectedIndex = -1;
 
-            comboBox_student.DataSource = course.getCourse(new MySqlCommand("SELECT * FROM `student`"));
-            comboBox_student.DisplayMember = "StdFirstName";
-            comboBox_student.ValueMember = "StdId";
+            comboBox_student.DataSource = course.getCourse(new MySqlCommand("SELECT * FROM `account`"));
+            comboBox_student.DisplayMember = "AccFirstName";
+            comboBox_student.ValueMember = "AccId";
             comboBox_student.SelectedIndex = -1;
 
             button_delete.Enabled = false;
@@ -42,9 +42,9 @@ namespace Transparent_Form
         private void showData()
         {
             DataGridView_studentCourse.DataSource = course.getCourse(new MySqlCommand(
-                "SELECT score.StudentId,student.StdFirstName,student.StdLastName,score.CourseId,course.CourseName " +
-                "FROM score INNER JOIN student INNER JOIN course " +
-                "WHERE score.StudentId=student.StdId AND score.CourseId=course.CourseId"));
+                "SELECT score.StudentId, account.AccFirstName, account.AccLastName, score.CourseId,course.CourseName " +
+                "FROM score INNER JOIN account INNER JOIN course " +
+                "WHERE score.StudentId=account.AccId AND score.CourseId=course.CourseId"));
         }
 
         private void DataGridView_studentCourse_Click(object sender, DataGridViewCellEventArgs e)
@@ -128,10 +128,10 @@ namespace Transparent_Form
         private void button_search_Click(object sender, EventArgs e)
         {
             DataGridView_studentCourse.DataSource = score.getList(new MySqlCommand(
-                "SELECT score.StudentId, student.StdFirstName, student.StdLastName, score.CourseId, course.CourseName " +
-                "FROM score INNER JOIN student INNER JOIN course " +
-                "ON score.StudentId=student.StdId AND score.CourseId=course.CourseId " +
-                "WHERE CONCAT(course.CourseName, student.StdFirstName, student.StdLastName)LIKE '%" + textBox_search.Text + "%'"));
+                "SELECT score.StudentId, account.AccFirstName, account.AccLastName, score.CourseId, course.CourseName " +
+                "FROM score INNER JOIN account INNER JOIN course " +
+                "ON score.StudentId=account.AccId AND score.CourseId=course.CourseId " +
+                "WHERE CONCAT(course.CourseName, account.AccFirstName, account.AccLastName)LIKE '%" + textBox_search.Text + "%'"));
             textBox_search.Clear();
         }
 

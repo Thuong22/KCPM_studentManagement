@@ -94,61 +94,79 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CourseClass.cs" />
-    <Compile Include="CourseForm.cs">
+    <Compile Include="Forms\ManageAccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CourseForm.Designer.cs">
+    <Compile Include="Forms\ManageAccountForm.Designer.cs">
+      <DependentUpon>ManageAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\CourseClass.cs" />
+    <Compile Include="Forms\CourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CourseForm.Designer.cs">
       <DependentUpon>CourseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DBconnect.cs" />
     <Compile Include="DGVPrinter.cs" />
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Forms\MainFormStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Forms\MainFormStudent.Designer.cs">
+      <DependentUpon>MainFormStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainFormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Forms\MainFormAdmin.Designer.cs">
+      <DependentUpon>MainFormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageCourseForm.cs">
+    <Compile Include="Forms\ManageCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageCourseForm.Designer.cs">
+    <Compile Include="Forms\ManageCourseForm.Designer.cs">
       <DependentUpon>ManageCourseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageScoreForm.cs">
+    <Compile Include="Forms\ManageScoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageScoreForm.Designer.cs">
+    <Compile Include="Forms\ManageScoreForm.Designer.cs">
       <DependentUpon>ManageScoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageStudentForm.cs">
+    <Compile Include="Forms\ManageStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageStudentForm.Designer.cs">
+    <Compile Include="Forms\ManageStudentForm.Designer.cs">
       <DependentUpon>ManageStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrintCourseForm.cs">
+    <Compile Include="Forms\MyAccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintCourseForm.Designer.cs">
+    <Compile Include="Forms\MyAccountForm.Designer.cs">
+      <DependentUpon>MyAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintCourseForm.Designer.cs">
       <DependentUpon>PrintCourseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrintScoreForm.cs">
+    <Compile Include="Forms\PrintScoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintScoreForm.Designer.cs">
+    <Compile Include="Forms\PrintScoreForm.Designer.cs">
       <DependentUpon>PrintScoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrintStudent.cs">
+    <Compile Include="Forms\PrintStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintStudent.Designer.cs">
+    <Compile Include="Forms\PrintStudent.Designer.cs">
       <DependentUpon>PrintStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -158,39 +176,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ScoreClass.cs" />
-    <Compile Include="SplashForm.cs">
+    <Compile Include="Classes\ScoreClass.cs" />
+    <Compile Include="Forms\SplashForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SplashForm.Designer.cs">
+    <Compile Include="Forms\SplashForm.Designer.cs">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentClass.cs" />
-    <EmbeddedResource Include="CourseForm.resx">
+    <Compile Include="Classes\AccountClass.cs" />
+    <EmbeddedResource Include="Forms\ManageAccountForm.resx">
+      <DependentUpon>ManageAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CourseForm.resx">
       <DependentUpon>CourseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Forms\MainFormStudent.resx">
+      <DependentUpon>MainFormStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MainFormAdmin.resx">
+      <DependentUpon>MainFormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageCourseForm.resx">
+    <EmbeddedResource Include="Forms\ManageCourseForm.resx">
       <DependentUpon>ManageCourseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageScoreForm.resx">
+    <EmbeddedResource Include="Forms\ManageScoreForm.resx">
       <DependentUpon>ManageScoreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageStudentForm.resx">
+    <EmbeddedResource Include="Forms\ManageStudentForm.resx">
       <DependentUpon>ManageStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintCourseForm.resx">
+    <EmbeddedResource Include="Forms\MyAccountForm.resx">
+      <DependentUpon>MyAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrintCourseForm.resx">
       <DependentUpon>PrintCourseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintScoreForm.resx">
+    <EmbeddedResource Include="Forms\PrintScoreForm.resx">
       <DependentUpon>PrintScoreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintStudent.resx">
+    <EmbeddedResource Include="Forms\PrintStudent.resx">
       <DependentUpon>PrintStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -198,7 +225,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashForm.resx">
+    <EmbeddedResource Include="Forms\SplashForm.resx">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

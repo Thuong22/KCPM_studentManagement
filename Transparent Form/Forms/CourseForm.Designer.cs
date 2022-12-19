@@ -105,7 +105,7 @@ namespace Transparent_Form
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(10, 8);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(373, 32);
+            this.label7.Size = new System.Drawing.Size(291, 25);
             this.label7.TabIndex = 0;
             this.label7.Text = "Manage Students in Course";
             // 
@@ -167,7 +167,7 @@ namespace Transparent_Form
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label8.Location = new System.Drawing.Point(119, 130);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 23);
+            this.label8.Size = new System.Drawing.Size(66, 19);
             this.label8.TabIndex = 57;
             this.label8.Text = "Name :";
             // 
@@ -178,7 +178,7 @@ namespace Transparent_Form
             this.textBox_courName.Location = new System.Drawing.Point(185, 127);
             this.textBox_courName.Name = "textBox_courName";
             this.textBox_courName.ReadOnly = true;
-            this.textBox_courName.Size = new System.Drawing.Size(250, 32);
+            this.textBox_courName.Size = new System.Drawing.Size(250, 27);
             this.textBox_courName.TabIndex = 56;
             // 
             // label9
@@ -189,7 +189,7 @@ namespace Transparent_Form
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label9.Location = new System.Drawing.Point(5, 130);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 23);
+            this.label9.Size = new System.Drawing.Size(32, 19);
             this.label9.TabIndex = 55;
             this.label9.Text = "ID :";
             // 
@@ -199,7 +199,7 @@ namespace Transparent_Form
             this.textBox_courId.Location = new System.Drawing.Point(34, 127);
             this.textBox_courId.Name = "textBox_courId";
             this.textBox_courId.ReadOnly = true;
-            this.textBox_courId.Size = new System.Drawing.Size(75, 32);
+            this.textBox_courId.Size = new System.Drawing.Size(75, 27);
             this.textBox_courId.TabIndex = 54;
             // 
             // label5
@@ -210,7 +210,7 @@ namespace Transparent_Form
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label5.Location = new System.Drawing.Point(119, 51);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 23);
+            this.label5.Size = new System.Drawing.Size(66, 19);
             this.label5.TabIndex = 53;
             this.label5.Text = "Name :";
             // 
@@ -221,7 +221,7 @@ namespace Transparent_Form
             this.textBox_StdName.Location = new System.Drawing.Point(185, 48);
             this.textBox_StdName.Name = "textBox_StdName";
             this.textBox_StdName.ReadOnly = true;
-            this.textBox_StdName.Size = new System.Drawing.Size(250, 32);
+            this.textBox_StdName.Size = new System.Drawing.Size(250, 27);
             this.textBox_StdName.TabIndex = 52;
             // 
             // label4
@@ -232,7 +232,7 @@ namespace Transparent_Form
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label4.Location = new System.Drawing.Point(5, 53);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 23);
+            this.label4.Size = new System.Drawing.Size(32, 19);
             this.label4.TabIndex = 51;
             this.label4.Text = "ID :";
             // 
@@ -244,7 +244,7 @@ namespace Transparent_Form
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label3.Location = new System.Drawing.Point(5, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 23);
+            this.label3.Size = new System.Drawing.Size(133, 19);
             this.label3.TabIndex = 49;
             this.label3.Text = "Selected Course";
             // 
@@ -254,7 +254,7 @@ namespace Transparent_Form
             this.textBox_StdId.Location = new System.Drawing.Point(34, 48);
             this.textBox_StdId.Name = "textBox_StdId";
             this.textBox_StdId.ReadOnly = true;
-            this.textBox_StdId.Size = new System.Drawing.Size(75, 32);
+            this.textBox_StdId.Size = new System.Drawing.Size(75, 27);
             this.textBox_StdId.TabIndex = 48;
             this.textBox_StdId.TextChanged += new System.EventHandler(this.textBox_Id_TextChanged);
             // 
@@ -266,7 +266,7 @@ namespace Transparent_Form
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label6.Location = new System.Drawing.Point(10, 24);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 23);
+            this.label6.Size = new System.Drawing.Size(137, 19);
             this.label6.TabIndex = 47;
             this.label6.Text = "Selected Student";
             // 
@@ -314,7 +314,7 @@ namespace Transparent_Form
             this.comboBox_course.FormattingEnabled = true;
             this.comboBox_course.Location = new System.Drawing.Point(158, 111);
             this.comboBox_course.Name = "comboBox_course";
-            this.comboBox_course.Size = new System.Drawing.Size(250, 31);
+            this.comboBox_course.Size = new System.Drawing.Size(250, 29);
             this.comboBox_course.TabIndex = 43;
             // 
             // comboBox_student
@@ -323,7 +323,7 @@ namespace Transparent_Form
             this.comboBox_student.FormattingEnabled = true;
             this.comboBox_student.Location = new System.Drawing.Point(158, 48);
             this.comboBox_student.Name = "comboBox_student";
-            this.comboBox_student.Size = new System.Drawing.Size(250, 31);
+            this.comboBox_student.Size = new System.Drawing.Size(250, 29);
             this.comboBox_student.TabIndex = 45;
             // 
             // label2
@@ -334,7 +334,7 @@ namespace Transparent_Form
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label2.Location = new System.Drawing.Point(32, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 23);
+            this.label2.Size = new System.Drawing.Size(120, 19);
             this.label2.TabIndex = 42;
             this.label2.Text = "Select Course :";
             // 
@@ -346,7 +346,7 @@ namespace Transparent_Form
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label1.Location = new System.Drawing.Point(32, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 23);
+            this.label1.Size = new System.Drawing.Size(124, 19);
             this.label1.TabIndex = 44;
             this.label1.Text = "Select Student :";
             // 
@@ -449,7 +449,7 @@ namespace Transparent_Form
             this.textBox_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_search.Location = new System.Drawing.Point(642, 55);
             this.textBox_search.Name = "textBox_search";
-            this.textBox_search.Size = new System.Drawing.Size(156, 32);
+            this.textBox_search.Size = new System.Drawing.Size(156, 27);
             this.textBox_search.TabIndex = 34;
             // 
             // sId
@@ -462,7 +462,7 @@ namespace Transparent_Form
             // 
             // sFname
             // 
-            this.sFname.DataPropertyName = "StdFirstName";
+            this.sFname.DataPropertyName = "AccFirstName";
             this.sFname.HeaderText = "First Name";
             this.sFname.MinimumWidth = 6;
             this.sFname.Name = "sFname";
@@ -470,7 +470,7 @@ namespace Transparent_Form
             // 
             // sLname
             // 
-            this.sLname.DataPropertyName = "StdLastName";
+            this.sLname.DataPropertyName = "AccLastName";
             this.sLname.HeaderText = "Last Name";
             this.sLname.MinimumWidth = 6;
             this.sLname.Name = "sLname";
@@ -494,7 +494,7 @@ namespace Transparent_Form
             // 
             // CourseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(934, 613);

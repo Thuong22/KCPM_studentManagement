@@ -14,7 +14,7 @@ namespace Transparent_Form
 {
     public partial class PrintStudent : Form
     {
-        StudentClass student = new StudentClass();
+        AccountClass student = new AccountClass();
         DGVPrinter printer = new DGVPrinter();
         
         public PrintStudent()
@@ -29,7 +29,7 @@ namespace Transparent_Form
             comboBox_gender.Items.Add("Female");
             comboBox_gender.SelectedIndex = 0;
 
-            showData(new MySqlCommand("SELECT * FROM `student`"));
+            showData(new MySqlCommand("SELECT AccId, AccFirstName, AccLastName, Birthdate, Gender, Phone, Address, Photo FROM `account` WHERE Type = 2"));
         }
 
         public void showData(MySqlCommand command)
@@ -46,11 +46,11 @@ namespace Transparent_Form
             string selectQuery;
             if (comboBox_gender.Text=="All")
             {
-                selectQuery = "SELECT* FROM `student`";
+                selectQuery = "SSELECT AccId, AccFirstName, AccLastName, Birthdate, Gender, Phone, Address, Photo FROM `account` WHERE Type = 2";
             }
             else
             {
-                selectQuery = "SELECT * FROM `student` WHERE `Gender`='" + comboBox_gender.Text + "'";
+                selectQuery = "SELECT AccId, AccFirstName, AccLastName, Birthdate, Gender, Phone, Address, Photo FROM `account` WHERE Type = 2 AND `Gender`='" + comboBox_gender.Text + "'";
             }
 
             showData(new MySqlCommand(selectQuery));

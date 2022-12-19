@@ -72,7 +72,7 @@ namespace Transparent_Form
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(10, 8);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(197, 32);
+            this.label7.Size = new System.Drawing.Size(153, 25);
             this.label7.TabIndex = 0;
             this.label7.Text = "Print Score List";
             // 
@@ -81,7 +81,7 @@ namespace Transparent_Form
             this.textBox_search.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.textBox_search.Location = new System.Drawing.Point(618, 55);
             this.textBox_search.Name = "textBox_search";
-            this.textBox_search.Size = new System.Drawing.Size(180, 32);
+            this.textBox_search.Size = new System.Drawing.Size(180, 27);
             this.textBox_search.TabIndex = 41;
             // 
             // button_search
@@ -188,7 +188,7 @@ namespace Transparent_Form
             // 
             // sFname
             // 
-            this.sFname.DataPropertyName = "StdFirstName";
+            this.sFname.DataPropertyName = "AccFirstName";
             this.sFname.HeaderText = "First Name";
             this.sFname.MinimumWidth = 6;
             this.sFname.Name = "sFname";
@@ -196,7 +196,7 @@ namespace Transparent_Form
             // 
             // sLname
             // 
-            this.sLname.DataPropertyName = "StdLastName";
+            this.sLname.DataPropertyName = "AccLastName";
             this.sLname.HeaderText = "Last Name";
             this.sLname.MinimumWidth = 6;
             this.sLname.Name = "sLname";
@@ -228,7 +228,7 @@ namespace Transparent_Form
             // 
             // PrintScoreForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(934, 613);

@@ -13,7 +13,7 @@ namespace Transparent_Form
 {
     public partial class LoginForm : Form
     {
-        StudentClass student = new StudentClass();
+       // AccountClass account = new AccountClass();
         public LoginForm()
         {
             InitializeComponent();
@@ -46,11 +46,19 @@ namespace Transparent_Form
             {
                 string uname = textBox_usrname.Text;
                 string pass = textBox_password.Text;
-                DataTable table = student.getList(new MySqlCommand("SELECT * FROM `user` WHERE `username`= '" + uname + "' AND `password`='" + pass + "'"));
-                if (table.Rows.Count > 0)
+                bool flag = AccountClass.account.getMyAccount("SELECT * FROM `account` WHERE `Username`= '" + uname + "' AND `Password`='" + pass + "'");
+                if (flag)
                 {
-
-                    MainForm main = new MainForm();
+                    Form main;
+                    if (AccountClass.account.type == 1)
+                    {
+                        main = new MainFormAdmin();
+                    }
+                    else
+                    {
+                        main = new MainFormStudent();
+                    }
+                    
                     this.Hide();
                     main.ShowDialog();
                     this.Show();
@@ -61,6 +69,7 @@ namespace Transparent_Form
                 else
                 {
                     MessageBox.Show("Your username and password are not exists", "Wrong Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   
                 }
             }
 
