@@ -374,7 +374,7 @@ namespace Transparent_Form
             // 
             // sFname
             // 
-            this.sFname.DataPropertyName = "StdFirstName";
+            this.sFname.DataPropertyName = "AccFirstName";
             this.sFname.HeaderText = "First Name";
             this.sFname.MinimumWidth = 6;
             this.sFname.Name = "sFname";
@@ -383,7 +383,7 @@ namespace Transparent_Form
             // 
             // sLname
             // 
-            this.sLname.DataPropertyName = "StdLastName";
+            this.sLname.DataPropertyName = "AccLastName";
             this.sLname.HeaderText = "Last Name";
             this.sLname.MinimumWidth = 6;
             this.sLname.Name = "sLname";

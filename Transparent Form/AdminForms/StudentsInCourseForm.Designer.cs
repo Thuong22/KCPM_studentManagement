@@ -29,8 +29,8 @@ namespace Transparent_Form
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,12 +59,12 @@ namespace Transparent_Form
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgvStudentCourse = new System.Windows.Forms.DataGridView();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.sId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sFname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sLname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -397,14 +397,14 @@ namespace Transparent_Form
             this.dtgvStudentCourse.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvStudentCourse.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvStudentCourse.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvStudentCourse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvStudentCourse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvStudentCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvStudentCourse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sId,
@@ -412,14 +412,14 @@ namespace Transparent_Form
             this.sLname,
             this.cId,
             this.cName});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvStudentCourse.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvStudentCourse.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvStudentCourse.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgvStudentCourse.EnableHeadersVisualStyles = false;
             this.dtgvStudentCourse.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
@@ -434,6 +434,15 @@ namespace Transparent_Form
             this.dtgvStudentCourse.TabIndex = 43;
             this.dtgvStudentCourse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvStudentCourse_CellClick);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Location = new System.Drawing.Point(598, 42);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(325, 27);
+            this.txtSearch.TabIndex = 41;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
             // sId
             // 
             this.sId.DataPropertyName = "StudentId";
@@ -444,7 +453,7 @@ namespace Transparent_Form
             // 
             // sFname
             // 
-            this.sFname.DataPropertyName = "StdFirstName";
+            this.sFname.DataPropertyName = "AccFirstName";
             this.sFname.HeaderText = "First Name";
             this.sFname.MinimumWidth = 6;
             this.sFname.Name = "sFname";
@@ -452,7 +461,7 @@ namespace Transparent_Form
             // 
             // sLname
             // 
-            this.sLname.DataPropertyName = "StdLastName";
+            this.sLname.DataPropertyName = "AccLastName";
             this.sLname.HeaderText = "Last Name";
             this.sLname.MinimumWidth = 6;
             this.sLname.Name = "sLname";
@@ -473,15 +482,6 @@ namespace Transparent_Form
             this.cName.MinimumWidth = 6;
             this.cName.Name = "cName";
             this.cName.ReadOnly = true;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.Location = new System.Drawing.Point(598, 42);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(325, 27);
-            this.txtSearch.TabIndex = 41;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // StudentInCourseForm
             // 
@@ -540,12 +540,12 @@ namespace Transparent_Form
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtgvStudentCourse;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn sId;
         private System.Windows.Forms.DataGridViewTextBoxColumn sFname;
         private System.Windows.Forms.DataGridViewTextBoxColumn sLname;
         private System.Windows.Forms.DataGridViewTextBoxColumn cId;
         private System.Windows.Forms.DataGridViewTextBoxColumn cName;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label label2;
     }
 }
