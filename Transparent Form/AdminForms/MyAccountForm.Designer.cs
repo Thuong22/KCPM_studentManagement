@@ -30,23 +30,24 @@
         {
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlCover = new System.Windows.Forms.Panel();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbBirth = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDateOfBirth = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lbPhone = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbGender = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbAddress = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.pnlWelcome = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.lbType = new System.Windows.Forms.Label();
@@ -54,16 +55,6 @@
             this.lbWelcome = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pbImage = new System.Windows.Forms.PictureBox();
-            this.btnMyScores = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.btnMyCourses = new System.Windows.Forms.Button();
-            this.btnAllCourses = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.pnlNavigation = new System.Windows.Forms.Panel();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.pnlTop = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnAllCourse = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             this.pnlCover.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -75,22 +66,21 @@
             this.pnlWelcome.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
-            this.pnlNavigation.SuspendLayout();
-            this.pnlTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
             this.pnlMain.Controls.Add(this.pnlCover);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(200, 40);
+            this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(950, 610);
-            this.pnlMain.TabIndex = 5;
+            this.pnlMain.TabIndex = 6;
             // 
             // pnlCover
             // 
             this.pnlCover.BackColor = System.Drawing.Color.AliceBlue;
+            this.pnlCover.Controls.Add(this.btnChangePassword);
             this.pnlCover.Controls.Add(this.panel3);
             this.pnlCover.Controls.Add(this.btnEdit);
             this.pnlCover.Controls.Add(this.pictureBox1);
@@ -106,11 +96,26 @@
             this.pnlCover.Size = new System.Drawing.Size(950, 610);
             this.pnlCover.TabIndex = 1;
             // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
+            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangePassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.ForeColor = System.Drawing.Color.White;
+            this.btnChangePassword.Location = new System.Drawing.Point(622, 80);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(170, 40);
+            this.btnChangePassword.TabIndex = 32;
+            this.btnChangePassword.Text = "Change Password";
+            this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.lbBirth);
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.lblDateOfBirth);
             this.panel3.Location = new System.Drawing.Point(277, 260);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
@@ -128,17 +133,17 @@
             this.lbBirth.Size = new System.Drawing.Size(0, 25);
             this.lbBirth.TabIndex = 12;
             // 
-            // label3
+            // lblDateOfBirth
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label3.Location = new System.Drawing.Point(10, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 25);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Date of Birth:";
+            this.lblDateOfBirth.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDateOfBirth.AutoSize = true;
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.lblDateOfBirth.Location = new System.Drawing.Point(10, 12);
+            this.lblDateOfBirth.Name = "lblDateOfBirth";
+            this.lblDateOfBirth.Size = new System.Drawing.Size(140, 25);
+            this.lblDateOfBirth.TabIndex = 12;
+            this.lblDateOfBirth.Text = "Date of Birth:";
             // 
             // btnEdit
             // 
@@ -147,12 +152,13 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(822, 80);
+            this.btnEdit.Location = new System.Drawing.Point(805, 80);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(118, 40);
             this.btnEdit.TabIndex = 30;
             this.btnEdit.Text = "Edit Profile";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // pictureBox1
             // 
@@ -170,7 +176,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.lbPhone);
-            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.lblPhone);
             this.panel6.Location = new System.Drawing.Point(622, 260);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
@@ -188,23 +194,23 @@
             this.lbPhone.Size = new System.Drawing.Size(0, 25);
             this.lbPhone.TabIndex = 10;
             // 
-            // label5
+            // lblPhone
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label5.Location = new System.Drawing.Point(10, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 25);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Phone:";
+            this.lblPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.lblPhone.Location = new System.Drawing.Point(10, 12);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(82, 25);
+            this.lblPhone.TabIndex = 10;
+            this.lblPhone.Text = "Phone:";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.lbGender);
-            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.lblGender);
             this.panel5.Location = new System.Drawing.Point(622, 161);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
@@ -222,23 +228,23 @@
             this.lbGender.Size = new System.Drawing.Size(0, 25);
             this.lbGender.TabIndex = 11;
             // 
-            // label4
+            // lblGender
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label4.Location = new System.Drawing.Point(10, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 25);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Gender:";
+            this.lblGender.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.lblGender.Location = new System.Drawing.Point(10, 12);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(96, 25);
+            this.lblGender.TabIndex = 11;
+            this.lblGender.Text = "Gender:";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.lbAddress);
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.lblAddress);
             this.panel4.Location = new System.Drawing.Point(277, 359);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
@@ -256,23 +262,23 @@
             this.lbAddress.Size = new System.Drawing.Size(0, 25);
             this.lbAddress.TabIndex = 11;
             // 
-            // label6
+            // lblAddress
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label6.Location = new System.Drawing.Point(10, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 25);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Address:";
+            this.lblAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.lblAddress.Location = new System.Drawing.Point(10, 12);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(100, 25);
+            this.lblAddress.TabIndex = 11;
+            this.lblAddress.Text = "Address:";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lbName);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblName);
             this.panel1.Location = new System.Drawing.Point(277, 161);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -290,17 +296,17 @@
             this.lbName.Size = new System.Drawing.Size(0, 25);
             this.lbName.TabIndex = 13;
             // 
-            // label2
+            // lblName
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label2.Location = new System.Drawing.Point(10, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 25);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Name:";
+            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.lblName.Location = new System.Drawing.Point(10, 12);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(81, 25);
+            this.lblName.TabIndex = 13;
+            this.lblName.Text = "Name:";
             // 
             // pnlWelcome
             // 
@@ -335,9 +341,9 @@
             this.lbType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.lbType.Location = new System.Drawing.Point(857, 7);
             this.lbType.Name = "lbType";
-            this.lbType.Size = new System.Drawing.Size(89, 21);
+            this.lbType.Size = new System.Drawing.Size(76, 21);
             this.lbType.TabIndex = 2;
-            this.lbType.Text = "(student)";
+            this.lbType.Text = "(admin)";
             // 
             // lbUsername
             // 
@@ -385,183 +391,13 @@
             this.pbImage.TabIndex = 28;
             this.pbImage.TabStop = false;
             // 
-            // btnMyScores
-            // 
-            this.btnMyScores.BackColor = System.Drawing.Color.White;
-            this.btnMyScores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMyScores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMyScores.FlatAppearance.BorderSize = 0;
-            this.btnMyScores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyScores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyScores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnMyScores.Location = new System.Drawing.Point(0, 202);
-            this.btnMyScores.Margin = new System.Windows.Forms.Padding(5);
-            this.btnMyScores.Name = "btnMyScores";
-            this.btnMyScores.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMyScores.Size = new System.Drawing.Size(200, 55);
-            this.btnMyScores.TabIndex = 23;
-            this.btnMyScores.Text = "My Scores";
-            this.btnMyScores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyScores.UseVisualStyleBackColor = false;
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.BackColor = System.Drawing.Color.White;
-            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnDashboard.Location = new System.Drawing.Point(0, 92);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(5);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(200, 55);
-            this.btnDashboard.TabIndex = 11;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            // 
-            // btnMyCourses
-            // 
-            this.btnMyCourses.BackColor = System.Drawing.Color.White;
-            this.btnMyCourses.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMyCourses.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMyCourses.FlatAppearance.BorderSize = 0;
-            this.btnMyCourses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyCourses.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyCourses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnMyCourses.Location = new System.Drawing.Point(0, 147);
-            this.btnMyCourses.Margin = new System.Windows.Forms.Padding(5);
-            this.btnMyCourses.Name = "btnMyCourses";
-            this.btnMyCourses.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMyCourses.Size = new System.Drawing.Size(200, 55);
-            this.btnMyCourses.TabIndex = 15;
-            this.btnMyCourses.Text = "My Courses";
-            this.btnMyCourses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyCourses.UseVisualStyleBackColor = false;
-            // 
-            // btnAllCourses
-            // 
-            this.btnAllCourses.BackColor = System.Drawing.Color.White;
-            this.btnAllCourses.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAllCourses.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAllCourses.FlatAppearance.BorderSize = 0;
-            this.btnAllCourses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAllCourses.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAllCourses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnAllCourses.Location = new System.Drawing.Point(0, 202);
-            this.btnAllCourses.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAllCourses.Name = "btnAllCourses";
-            this.btnAllCourses.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAllCourses.Size = new System.Drawing.Size(200, 55);
-            this.btnAllCourses.TabIndex = 23;
-            this.btnAllCourses.Text = "All Courses";
-            this.btnAllCourses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllCourses.UseVisualStyleBackColor = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.White;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnExit.Location = new System.Drawing.Point(0, 257);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(5);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(200, 55);
-            this.btnExit.TabIndex = 26;
-            this.btnExit.Text = "Log out";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.UseVisualStyleBackColor = false;
-            // 
-            // pnlNavigation
-            // 
-            this.pnlNavigation.AutoScroll = true;
-            this.pnlNavigation.BackColor = System.Drawing.Color.White;
-            this.pnlNavigation.Controls.Add(this.btnExit);
-            this.pnlNavigation.Controls.Add(this.btnAllCourses);
-            this.pnlNavigation.Controls.Add(this.btnMyCourses);
-            this.pnlNavigation.Controls.Add(this.btnDashboard);
-            this.pnlNavigation.Controls.Add(this.pnlLogo);
-            this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlNavigation.Location = new System.Drawing.Point(0, 40);
-            this.pnlNavigation.Margin = new System.Windows.Forms.Padding(5);
-            this.pnlNavigation.Name = "pnlNavigation";
-            this.pnlNavigation.Size = new System.Drawing.Size(200, 610);
-            this.pnlNavigation.TabIndex = 3;
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackColor = System.Drawing.Color.White;
-            this.pnlLogo.BackgroundImage = global::Transparent_Form.Properties.Resources.Logo_SmallBlue;
-            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Margin = new System.Windows.Forms.Padding(5);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(200, 92);
-            this.pnlLogo.TabIndex = 0;
-            // 
-            // pnlTop
-            // 
-            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(197)))));
-            this.pnlTop.Controls.Add(this.btnClose);
-            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1150, 40);
-            this.pnlTop.TabIndex = 1;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = global::Transparent_Form.Properties.Resources.icon_close;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1111, 5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 36);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnClose.UseVisualStyleBackColor = false;
-            // 
-            // btnAllCourse
-            // 
-            this.btnAllCourse.BackColor = System.Drawing.Color.White;
-            this.btnAllCourse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAllCourse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAllCourse.FlatAppearance.BorderSize = 0;
-            this.btnAllCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAllCourse.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAllCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnAllCourse.Location = new System.Drawing.Point(0, 202);
-            this.btnAllCourse.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAllCourse.Name = "btnAllCourse";
-            this.btnAllCourse.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAllCourse.Size = new System.Drawing.Size(200, 55);
-            this.btnAllCourse.TabIndex = 23;
-            this.btnAllCourse.Text = "My Scores";
-            this.btnAllCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllCourse.UseVisualStyleBackColor = false;
-            // 
             // MyAccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1150, 650);
+            this.ClientSize = new System.Drawing.Size(950, 610);
             this.Controls.Add(this.pnlMain);
-            this.Controls.Add(this.pnlNavigation);
-            this.Controls.Add(this.pnlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MyAccountForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -583,8 +419,6 @@
             this.pnlWelcome.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
-            this.pnlNavigation.ResumeLayout(false);
-            this.pnlTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -594,23 +428,24 @@
         private System.Windows.Forms.Panel pnlSubCourse;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel pnlCover;
+        private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lbBirth;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDateOfBirth;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lbPhone;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lbGender;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbAddress;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbName;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Panel pnlWelcome;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbType;
@@ -618,15 +453,5 @@
         private System.Windows.Forms.Label lbWelcome;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pbImage;
-        private System.Windows.Forms.Button btnMyScores;
-        private System.Windows.Forms.Panel pnlLogo;
-        private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button btnMyCourses;
-        private System.Windows.Forms.Button btnAllCourses;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Panel pnlNavigation;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.Button btnAllCourse;
     }
 }

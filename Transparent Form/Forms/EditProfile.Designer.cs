@@ -97,6 +97,7 @@
             this.btnCancel.TabIndex = 50;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
@@ -111,6 +112,7 @@
             this.btnUpdate.TabIndex = 49;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnUpload
             // 
@@ -125,6 +127,7 @@
             this.btnUpload.TabIndex = 48;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // txtPhone
             // 
@@ -326,6 +329,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditProfile";
             this.Text = "EditProfile";
+            this.Load += new System.EventHandler(this.EditProfile_Load);
             this.pnlCover.ResumeLayout(false);
             this.pnlCover.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();

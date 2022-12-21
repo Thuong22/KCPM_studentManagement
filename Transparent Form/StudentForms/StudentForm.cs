@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -74,11 +75,35 @@ namespace Transparent_Form.Forms
             lbUsername.Location = new Point(pnlWelcome.Width - (lbUsername.Size.Width + 87), lbUsername.Location.Y);
             lbWelcome.Location = new Point(pnlWelcome.Width - (lbWelcome.Size.Width + lbUsername.Size.Width + 81), lbWelcome.Location.Y);
 
-            //var data = student.GetStudentList("")
+            LoadInfomationAccount(); 
+        }
 
-            //student = student.GetStudentList
+        private void LoadInfomationAccount()
+        {
+            //label1_username.Text = AccountClass.account.username + ",";
 
-            //lbName.Text = 
+            //textBox_id.Text = AccountClass.account.accId.ToString();
+            //textBox_Username.Text = AccountClass.account.username;
+            //textBox_password.Text = AccountClass.account.password;
+            //comboBox_type.SelectedIndex = AccountClass.account.type - 1;
+
+            lbName.Text = DataProvider.account.accFirstName + " " + DataProvider.account.accLastName;
+            lbGender.Text = DataProvider.account.gender;
+            lbBirth.Text = DataProvider.account.birthdate.ToShortDateString();      
+            lbPhone.Text = DataProvider.account.phone;
+            lbAddress.Text = DataProvider.account.address;
+            byte[] img;
+            try
+            {
+                img = (byte[])DataProvider.account.photo;
+                MemoryStream ms = new MemoryStream(img);
+                pbImage.Image = Image.FromStream(ms);
+            }
+            catch
+            {
+                img = null;
+                pbImage.Image = null;
+            }
         }
 
         private void OpenChildForm(Form childForm)
@@ -122,7 +147,7 @@ namespace Transparent_Form.Forms
             EnableButton(sender as Button);
             if (activeForm != null)
                 activeForm.Close();
-            pnlMain.Controls.Add(pnlCover);
+            pnlMain.Controls.Add(pnlCover);          
         }
 
         private void btnMyCourses_Click(object sender, EventArgs e)
@@ -156,7 +181,19 @@ namespace Transparent_Form.Forms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new EditProfile());
+            OpenChildForm(new EditProfile());
+
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            ChangePasswordForm changePassword = new ChangePasswordForm();
+            changePassword.ShowDialog();
+        }
+
+        private void StudentForm_Activated(object sender, EventArgs e)
+        {
+            LoadInfomationAccount();
         }
     }
 }

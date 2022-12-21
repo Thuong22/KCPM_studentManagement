@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Transparent_Form.AdminForms;
+using Transparent_Form.Forms;
 using Transparent_Form.Models;
 
 namespace Transparent_Form
@@ -69,9 +70,8 @@ namespace Transparent_Form
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            pnlSubStudent.Visible = false;
-            pnlSubCourse.Visible = false;
-            pnlSubScore.Visible = false;
+            HideSubmenu();
+            
             student = new Account();
             course = new Course();
             EnableButton(btnDashboard);
@@ -108,6 +108,8 @@ namespace Transparent_Form
 
         private void HideSubmenu()
         {
+            if (pnlSubAccount.Visible == true)
+                pnlSubAccount.Visible = false;  
             if (pnlSubStudent.Visible == true)
                 pnlSubStudent.Visible = false;
             if (pnlSubCourse.Visible == true)
@@ -177,7 +179,7 @@ namespace Transparent_Form
 
         private void btnMyAccount_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new MyAccountForm());
         }
         #endregion Group of Account button
 

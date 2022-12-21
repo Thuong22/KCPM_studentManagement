@@ -325,25 +325,33 @@ namespace Transparent_Form
 
         }
 
-        public bool UpdateMyAccount()
+        public bool UpdateMyAccount(string fname, string lname, DateTime birthdate, string gender, string phone, string address, object photo)
         {
-            MySqlCommand command = new MySqlCommand("UPDATE `account` SET `Username`=@usr, `AccFirstName`=@fn,`AccLastName`=@ln,`Birthdate`=@bd,`Gender`=@gd,`Phone`=@ph,`Address`=@adr,`Photo`=@img WHERE  `AccId`= @id", connect.GetConnection);
+            MySqlCommand command = new MySqlCommand("UPDATE `account` SET `AccFirstName`=@fn,`AccLastName`=@ln,`Birthdate`=@bd,`Gender`=@gd,`Phone`=@ph,`Address`=@adr,`Photo`=@img WHERE  `AccId`= @id", connect.GetConnection);
 
             //@id, @usr, @fn, @ln, @bd, @gd, @ph, @adr, @img
-            command.Parameters.Add("@id", MySqlDbType.Int32).Value = _accId;
-            command.Parameters.Add("@usr", MySqlDbType.VarChar).Value = _username;
-            command.Parameters.Add("@fn", MySqlDbType.VarChar).Value = _accFirstName;
-            command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = _accLastName;
-            command.Parameters.Add("@bd", MySqlDbType.Date).Value = _birthdate;
-            command.Parameters.Add("@gd", MySqlDbType.VarChar).Value = _gender;
-            command.Parameters.Add("@ph", MySqlDbType.VarChar).Value = _phone;
-            command.Parameters.Add("@adr", MySqlDbType.VarChar).Value = _address;
-            command.Parameters.Add("@img", MySqlDbType.Blob).Value = _photo;
+            command.Parameters.Add("@id", MySqlDbType.Int32).Value = _accId;         
+            command.Parameters.Add("@fn", MySqlDbType.VarChar).Value = fname;
+            command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = lname;
+            command.Parameters.Add("@bd", MySqlDbType.Date).Value = birthdate;
+            command.Parameters.Add("@gd", MySqlDbType.VarChar).Value = gender;
+            command.Parameters.Add("@ph", MySqlDbType.VarChar).Value = phone;
+            command.Parameters.Add("@adr", MySqlDbType.VarChar).Value = address;
+            command.Parameters.Add("@img", MySqlDbType.Blob).Value = photo;
 
             connect.OpenConnect();
             if (command.ExecuteNonQuery() == 1)
             {
                 connect.CloseConnect();
+
+                _accFirstName = fname;
+                _accLastName = lname;
+                _birthdate = birthdate;
+                _gender = gender;
+                _phone = phone;
+                _address = address;
+                _photo = photo;
+
                 return true;
             }
             else
