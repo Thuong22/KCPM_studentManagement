@@ -24,7 +24,7 @@ namespace Transparent_Form.Forms
             {
                 MessageBox.Show("Please fill in all fields", "Update Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            }
+            }                      
 
             if (DataProvider.account.password != txtCurrentPass.Text)
             {
@@ -36,6 +36,12 @@ namespace Transparent_Form.Forms
                 MessageBox.Show("The Confirm New Password confirmation does not match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (txtCurrentPass.Text.Length < 6 || txtNewPass.Text.Length < 6 || txtCheckNewPass.Text.Length < 6)
+            {
+                MessageBox.Show("Passwords must be at least 6 characters long.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }                 
 
             if (DataProvider.account.UpdatePassword(txtNewPass.Text))
             {

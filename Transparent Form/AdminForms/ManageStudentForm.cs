@@ -30,6 +30,8 @@ namespace Transparent_Form
             //System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
             //dtpBirth.Value.GetDateTimeFormats(culture);
 
+            txtPhone.MaxLength = 10;
+
             dtgvStudent.AutoGenerateColumns = false;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
@@ -275,5 +277,13 @@ namespace Transparent_Form
                 return true;
         }
         #endregion
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

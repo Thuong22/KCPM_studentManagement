@@ -179,5 +179,13 @@ namespace Transparent_Form.Forms
             pnlInfoScreen.BringToFront();
         }
         #endregion edit info
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -25,13 +25,14 @@ namespace Transparent_Form.AdminForms
             cbbSearch.Items.Add("Admin");
             cbbSearch.Items.Add("Student");
             cbbSearch.SelectedIndex = 0;
+            cbbSearch.Enabled = false;
 
             cbbType.Items.Add("Admin");
             cbbType.Items.Add("Student");
             cbbType.SelectedIndex = -1;
+            cbbType.Enabled = false;
 
-            btnDelete.Enabled = false;
-            btnDelete.Enabled = false;
+            BtnEnable();
             dtpBirth.CustomFormat = "dd / MM / yyyy  -  dddd";
             showTable();
         }
@@ -46,10 +47,8 @@ namespace Transparent_Form.AdminForms
 
         private void dtgvAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtId.ReadOnly = true;
-            buttonEnable();
             cbbType.Enabled = false;
-
+            BtnEnable();
             txtId.Text = dtgvAccount.CurrentRow.Cells[0].Value.ToString();
             txtUsername.Text = dtgvAccount.CurrentRow.Cells[1].Value.ToString();
             if (dtgvAccount.CurrentRow.Cells[2].Value.ToString() == "1")
@@ -106,22 +105,6 @@ namespace Transparent_Form.AdminForms
         #endregion
 
        
-        private void buttonEnable()
-        {
-            if (txtId.ReadOnly == true)
-            {
-                btnAdd.Enabled = false;
-                btnUpdate.Enabled = true;
-                btnDelete.Enabled = true;
-            }
-            else
-            {
-                btnAdd.Enabled = true;
-                btnUpdate.Enabled = false;
-                btnDelete.Enabled = false;
-            }
-        }
-
         private void btnUpload_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
@@ -146,7 +129,7 @@ namespace Transparent_Form.AdminForms
 
             cbbType.Enabled = true;
             txtId.ReadOnly = false;
-            buttonEnable();
+            BtnEnable();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -209,8 +192,7 @@ namespace Transparent_Form.AdminForms
                     MessageBox.Show("Please fill in all fields", "Add Account", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-        }
-    
+        }    
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -296,5 +278,33 @@ namespace Transparent_Form.AdminForms
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
 
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))               
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void BtnEnable()
+        {
+            if (txtId.Text != "")
+            {
+                btnAdd.Enabled = false;
+                btnUpdate.Enabled = true;
+                btnDelete.Enabled = true;
+            }
+            else
+            {
+                btnAdd.Enabled = true;
+                btnUpdate.Enabled = false;
+                btnDelete.Enabled = false;
+            }
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+            BtnEnable();
+        }
     }
 }
