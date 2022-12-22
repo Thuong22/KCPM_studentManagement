@@ -156,11 +156,11 @@ namespace Transparent_Form
         private bool SetUsername()
         {
             string username = "student.";
-            string id = (string)DataProvider.Instance.ExecuteScalar("SELECT max(AccId) FROM `account`");
-            username += id;
+            int id = (int)DataProvider.Instance.ExecuteScalar("SELECT max(AccId) FROM `account`");
+            username += id.ToString() ;
             MySqlCommand command2 = new MySqlCommand("UPDATE account SET Username = @usr WHERE AccId = @id; ", connect.GetConnection);
             command2.Parameters.Add("@usr", MySqlDbType.VarChar).Value = username;
-            command2.Parameters.Add("@id", MySqlDbType.Int32).Value = Int32.Parse(id);
+            command2.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
             connect.OpenConnect();
             if (command2.ExecuteNonQuery() == 1)
             {

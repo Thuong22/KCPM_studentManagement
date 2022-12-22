@@ -24,13 +24,11 @@ namespace Transparent_Form.AdminForms
             cbbSearch.Items.Add("All");
             cbbSearch.Items.Add("Admin");
             cbbSearch.Items.Add("Student");
-            cbbSearch.SelectedIndex = 0;
-            cbbSearch.Enabled = false;
+            cbbSearch.SelectedIndex = 0;          
 
             cbbType.Items.Add("Admin");
             cbbType.Items.Add("Student");
-            cbbType.SelectedIndex = -1;
-            cbbType.Enabled = false;
+            cbbType.SelectedIndex = -1;           
 
             BtnEnable();
             dtpBirth.CustomFormat = "dd / MM / yyyy  -  dddd";
