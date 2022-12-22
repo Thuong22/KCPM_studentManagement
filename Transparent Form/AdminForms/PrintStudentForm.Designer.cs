@@ -35,7 +35,6 @@ namespace Transparent_Form
             this.cbbGender = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtgvStudent = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.sId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sFname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sLname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +43,7 @@ namespace Transparent_Form
             this.sPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sPhoto = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvStudent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +66,7 @@ namespace Transparent_Form
             // 
             this.cbbGender.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cbbGender.BackColor = System.Drawing.Color.White;
+            this.cbbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGender.FormattingEnabled = true;
             this.cbbGender.Location = new System.Drawing.Point(64, 54);
             this.cbbGender.Name = "cbbGender";
@@ -133,18 +134,6 @@ namespace Transparent_Form
             this.dtgvStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvStudent.Size = new System.Drawing.Size(930, 500);
             this.dtgvStudent.TabIndex = 35;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 25);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Print Student List";
             // 
             // sId
             // 
@@ -215,6 +204,18 @@ namespace Transparent_Form
             this.sPhoto.MinimumWidth = 6;
             this.sPhoto.Name = "sPhoto";
             this.sPhoto.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 25);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Print Student List";
             // 
             // PrintStudentForm
             // 
