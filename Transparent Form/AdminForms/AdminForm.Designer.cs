@@ -425,7 +425,7 @@ namespace Transparent_Form
             this.btnManageAccount.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnManageAccount.Size = new System.Drawing.Size(183, 50);
             this.btnManageAccount.TabIndex = 1;
-            this.btnManageAccount.Text = "Manage Account";
+            this.btnManageAccount.Text = "Manage Accounts";
             this.btnManageAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageAccount.UseVisualStyleBackColor = false;
             this.btnManageAccount.Click += new System.EventHandler(this.btnManageAccount_Click);
@@ -445,7 +445,7 @@ namespace Transparent_Form
             this.btnAccount.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAccount.Size = new System.Drawing.Size(183, 55);
             this.btnAccount.TabIndex = 19;
-            this.btnAccount.Text = "Account";
+            this.btnAccount.Text = "Accounts";
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccount.UseVisualStyleBackColor = false;
             this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
