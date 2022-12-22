@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Transparent_Form.Models;
 
 namespace Transparent_Form.Forms
 {
@@ -33,7 +34,7 @@ namespace Transparent_Form.Forms
         private void LoadCourseList()
         {
             dtgvCourse.DataSource = course.GetCourseList($@"SELECT score.CourseId, course.CourseName, course.CourseHour, course.Description, score.Score 
-            FROM score INNER JOIN course ON score.StudentId={studentId} AND score.CourseId=course.CourseId;");
+            FROM score INNER JOIN course ON score.StudentId={DataProvider.account.accId} AND score.CourseId=course.CourseId;");
 
             lbTotal.Text = dtgvCourse.Rows.Count.ToString();
         }

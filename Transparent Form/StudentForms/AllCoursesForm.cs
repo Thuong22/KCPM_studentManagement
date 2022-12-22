@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transparent_Form.Models;
 
 namespace Transparent_Form.Forms
 {
@@ -19,6 +20,7 @@ namespace Transparent_Form.Forms
         public AllCoursesForm()
         {
             InitializeComponent();
+            studentId = DataProvider.account.accId;
         }
 
         private void AllCoursesForm_Load(object sender, EventArgs e)
